@@ -147,3 +147,4 @@
 /Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/bin/Debug/net9.0/FluentValidation.dll
 /Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/bin/Debug/net9.0/FluentValidation.AspNetCore.dll
 /Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/bin/Debug/net9.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/obj/Debug/net9.0/CabirCRM.API.sourcelink.json

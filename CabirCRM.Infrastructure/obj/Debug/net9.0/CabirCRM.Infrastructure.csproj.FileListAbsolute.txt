@@ -17,3 +17,4 @@
 /Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Infrastructure/obj/Debug/net9.0/CabirCRM.Infrastructure.pdb
 /Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Infrastructure/obj/Debug/net9.0/CabirCRM.Infrastructure.genruntimeconfig.cache
 /Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Infrastructure/obj/Debug/net9.0/ref/CabirCRM.Infrastructure.dll
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Infrastructure/obj/Debug/net9.0/CabirCRM.Infrastructure.sourcelink.json

@@ -16,6 +16,7 @@ var app = builder.Build();
 
 app.UseMiddleware<GlobalExceptionMiddleware>();
 app.UseMiddleware<ValidationExceptionMiddleware>();
+app.UseMiddleware<RequestLoggingMiddleware>();
 
 app.ApplyMigrations();
 

@@ -9,3 +9,4 @@
 /Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/obj/Debug/net9.0/refint/CabirCRM.Domain.dll
 /Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.pdb
 /Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/obj/Debug/net9.0/ref/CabirCRM.Domain.dll
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.sourcelink.json
