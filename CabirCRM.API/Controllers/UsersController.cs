@@ -233,7 +233,7 @@ public class UsersController(
             user.Update(
                 request.Username,
                 BCrypt.Net.BCrypt.HashPassword(request.Password),
-                user.Role // eski role aynen kalıyor!
+                user.Role
             );
         }
         else
@@ -252,6 +252,34 @@ public class UsersController(
             $"{nameof(UsersController)}.{nameof(Update)}",
             user.Id,
             user.Username
+        );
+
+        return NoContent();
+    }
+    
+    [Authorize]
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        var user = await userRepository.GetByIdAsync(id);
+
+        if (user == null)
+        {
+            logger.LogWarning(
+                "Delete failed. Context: {Context}, Reason: {Reason}, UserId: {UserId}",
+                $"{nameof(UsersController)}.{nameof(Delete)}",
+                "User not found",
+                id
+            );
+            return NotFound(new { message = "User not found." });
+        }
+
+        await userRepository.DeleteAsync(user);
+
+        logger.LogInformation(
+            "User deleted successfully. Context: {Context}, UserId: {UserId}",
+            $"{nameof(UsersController)}.{nameof(Delete)}",
+            user.Id
         );
 
         return NoContent();
