@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "TBgj4JR1WLPsFd+EkumP+idTGsS7kvXZfjIhr5zsyhI=",
+  "Source": "CabirCRM.API",
+  "BasePath": "_content/CabirCRM.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,0 +1,11 @@
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/bin/Debug/net9.0/CabirCRM.Domain.deps.json
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/bin/Debug/net9.0/CabirCRM.Domain.dll
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/bin/Debug/net9.0/CabirCRM.Domain.pdb
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.AssemblyInfoInputs.cache
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.AssemblyInfo.cs
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.csproj.CoreCompileInputs.cache
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.dll
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/obj/Debug/net9.0/refint/CabirCRM.Domain.dll
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.pdb
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/obj/Debug/net9.0/ref/CabirCRM.Domain.dll

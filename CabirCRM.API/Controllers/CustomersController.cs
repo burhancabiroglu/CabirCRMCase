@@ -1,0 +1,139 @@
+using CabirCRM.Application.DTOs;
+using CabirCRM.Application.Interfaces;
+using CabirCRM.Application.Requests.Customers;
+using CabirCRM.Application.Responses.Customers;
+using CabirCRM.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+namespace CabirCRM.API.Controllers;
+
+[Route("api/[controller]")]
+[Authorize(Policy = "AdminOrStandard")]
+[ApiController]
+public class CustomersController(ICustomerRepository customerRepository) : ControllerBase
+{
+    [Authorize(Policy = "AdminOnly")]
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] CreateCustomerRequest request)
+    {
+        var customer = new Customer(Guid.NewGuid(), request.FirstName, request.LastName, request.Email, request.Region);
+        await customerRepository.AddAsync(customer);
+
+        var response = new CreateCustomerResponse(customer.Id, $"{customer.FirstName} {customer.LastName}");
+
+        return CreatedAtAction(nameof(GetById), new { id = customer.Id }, response);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAll()
+    {
+        var customers = await customerRepository.GetAllAsync();
+        var result = customers.Select(c => new CustomerDto
+        {
+            Id = c.Id,
+            FirstName = c.FirstName,
+            LastName = c.LastName,
+            Email = c.Email,
+            Region = c.Region,
+            RegistrationDate = c.RegistrationDate
+        });
+
+        return Ok(result);
+    }
+
+    [Authorize(Policy = "AdminOnly")]
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(Guid id)
+    {
+        var customer = await customerRepository.GetByIdAsync(id);
+        if (customer == null) return NotFound();
+
+        var result = new CustomerDto
+        {
+            Id = customer.Id,
+            FirstName = customer.FirstName,
+            LastName = customer.LastName,
+            Email = customer.Email,
+            Region = customer.Region,
+            RegistrationDate = customer.RegistrationDate
+        };
+
+        return Ok(result);
+    }
+    
+    [HttpGet("filter")]
+    public async Task<IActionResult> FilterCustomers(
+        [FromQuery] string? firstName,
+        [FromQuery] string? lastName,
+        [FromQuery] string? email,
+        [FromQuery] DateTime? registrationDate,
+        [FromQuery] string? region)
+    {
+        var customers = await customerRepository.GetAllAsync();
+
+        var filteredCustomers = customers.AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(firstName))
+            filteredCustomers = filteredCustomers.Where(c => c.FirstName.Contains(firstName, StringComparison.OrdinalIgnoreCase));
+
+        if (!string.IsNullOrWhiteSpace(lastName))
+            filteredCustomers = filteredCustomers.Where(c => c.LastName.Contains(lastName, StringComparison.OrdinalIgnoreCase));
+
+        if (!string.IsNullOrWhiteSpace(email))
+            filteredCustomers = filteredCustomers.Where(c => c.Email.Contains(email, StringComparison.OrdinalIgnoreCase));
+
+        if (registrationDate.HasValue)
+            filteredCustomers = filteredCustomers.Where(c => c.RegistrationDate.Date == registrationDate.Value.Date);
+
+        if (!string.IsNullOrWhiteSpace(region))
+            filteredCustomers = filteredCustomers.Where(c => c.Region.Contains(region, StringComparison.OrdinalIgnoreCase));
+
+        var result = filteredCustomers.Select(c => new CustomerDto
+        {
+            Id = c.Id,
+            FirstName = c.FirstName,
+            LastName = c.LastName,
+            Email = c.Email,
+            Region = c.Region,
+            RegistrationDate = c.RegistrationDate
+        });
+
+        return Ok(result);
+    }
+    
+    [Authorize(Policy = "AdminOnly")]
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        var customer = await customerRepository.GetByIdAsync(id);
+
+        if (customer == null)
+            return NotFound(new { message = "Customer not found." });
+
+        await customerRepository.DeleteAsync(customer);
+
+        return NoContent();
+    }
+    
+    [Authorize(Policy = "AdminOnly")]
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(Guid id, [FromBody] UpdateCustomerRequest request)
+    {
+        var customer = await customerRepository.GetByIdAsync(id);
+
+        if (customer == null)
+            return NotFound(new { message = "Customer not found." });
+        
+        customer.Update(
+            firstName: request.FirstName,
+            lastName:request.LastName,
+            email:request.Email,
+            region:request.Region
+        );
+
+        await customerRepository.UpdateAsync(customer);
+
+        return NoContent();
+    }
+}

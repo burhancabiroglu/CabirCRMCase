@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "abMgF+mBx8Q=",
+  "success": true,
+  "projectFilePath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Application/CabirCRM.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/burhancabiroglu/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512"
+  ],
+  "logs": []
+}
