@@ -1,4 +1,5 @@
 using CabirCRM.API.Extensions;
+using CabirCRM.API.Handlers;
 using CabirCRM.API.Middlewares;
 using CabirCRM.Infrastructure;
 
@@ -8,14 +9,23 @@ builder.Services.AddControllers()
     .AddCustomJsonOptions()
     .AddCustomValidation();
 
-builder.Services.AddInfrastructure(builder.Configuration);
-builder.Services.AddJwtAuthentication(builder.Configuration);
-builder.Services.AddAuthorizationPolicies();
+builder.Services
+    .AddInfrastructure(builder.Configuration)
+    .AddJwtAuthentication(builder.Configuration)
+    .AddAuthorizationPolicies()
+    .AddExceptionHandler<GlobalExceptionHandler>()
+    .AddSwaggerGen()
+    .AddRouting(options =>
+{
+    options.LowercaseUrls = true;
+});
 
 var app = builder.Build();
+var logger = app.Services.GetRequiredService<ILogger<Program>>();
 
-app.UseMiddleware<GlobalExceptionMiddleware>();
+
 app.UseMiddleware<ValidationExceptionMiddleware>();
+app.UseMiddleware<RequestLoggingMiddleware>();
 
 app.ApplyMigrations();
 
@@ -25,6 +35,12 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
+app.UseExceptionHandler("/Error");
 app.UseAuthorization();
 app.MapControllers();
+
+app.MapSwagger();
+app.UseSwaggerUI();
+
+logger.LogInformation("Application is listening on: {Urls}", string.Join(", ", app.Urls));
 app.Run();

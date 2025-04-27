@@ -13,3 +13,4 @@
 /Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Application/obj/Debug/net9.0/refint/CabirCRM.Application.dll
 /Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Application/obj/Debug/net9.0/CabirCRM.Application.pdb
 /Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Application/obj/Debug/net9.0/ref/CabirCRM.Application.dll
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Application/obj/Debug/net9.0/CabirCRM.Application.sourcelink.json
