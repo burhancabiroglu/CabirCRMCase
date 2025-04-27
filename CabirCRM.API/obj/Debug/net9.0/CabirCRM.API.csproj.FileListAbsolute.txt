@@ -148,3 +148,6 @@
 /Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/bin/Debug/net9.0/FluentValidation.AspNetCore.dll
 /Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/bin/Debug/net9.0/FluentValidation.DependencyInjectionExtensions.dll
 /Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/obj/Debug/net9.0/CabirCRM.API.sourcelink.json
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
