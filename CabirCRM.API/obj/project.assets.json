@@ -3745,11 +3745,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/CabirCRM.API.csproj",
+      "projectUniqueName": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/CabirCRM.API.csproj",
       "projectName": "CabirCRM.API",
-      "projectPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/CabirCRM.API.csproj",
+      "projectPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/CabirCRM.API.csproj",
       "packagesPath": "/Users/burhancabiroglu/.nuget/packages/",
-      "outputPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/obj/",
+      "outputPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/burhancabiroglu/.nuget/NuGet/NuGet.Config"
@@ -3765,8 +3765,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Infrastructure/CabirCRM.Infrastructure.csproj": {
-              "projectPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Infrastructure/CabirCRM.Infrastructure.csproj"
+            "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Infrastructure/CabirCRM.Infrastructure.csproj": {
+              "projectPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Infrastructure/CabirCRM.Infrastructure.csproj"
             }
           }
         }
