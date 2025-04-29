@@ -38,6 +38,7 @@ export function CustomersView() {
   const [openDialog, setOpenDialog] = useState(false);
   const [editingCustomer, setEditingCustomer] = useState<Customer | null>(null);
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
+  const [confirmDeleteIds, setConfirmDeleteIds] = useState<string[] | null>(null);
   const [deleteSuccess, setDeleteSuccess] = useState(false);
 
   const handleOpenNew = () => {
@@ -58,6 +59,12 @@ export function CustomersView() {
 
   const handleDeleteRow = (id: string) => {
     setConfirmDeleteId(id);
+  };
+
+  const handleDeleteSelectedRows = () => {
+    if (table.selected.length > 0) {
+      setConfirmDeleteIds(table.selected);
+    }
   };
 
   const paginationParams = useMemo(
@@ -107,6 +114,7 @@ export function CustomersView() {
             setFilterName(event.target.value);
             table.onResetPage();
           }}
+          onDelete={handleDeleteSelectedRows}
         />
 
         <Scrollbar>
@@ -187,6 +195,23 @@ export function CustomersView() {
             await deleteCustomer(confirmDeleteId);
             setConfirmDeleteId(null);
             fetchCustomers();
+            setDeleteSuccess(true);
+          }
+        }}
+      />
+
+      <ConfirmDialog
+        open={!!confirmDeleteIds}
+        content="Are you sure you want to delete selected customers?"
+        onClose={() => setConfirmDeleteIds(null)}
+        onConfirm={async () => {
+          if (confirmDeleteIds?.length) {
+            for (const id of confirmDeleteIds) {
+              await deleteCustomer(id);
+            }
+            await fetchCustomers();
+            table.onSelectAllRows(false, []);
+            setConfirmDeleteIds(null);
             setDeleteSuccess(true);
           }
         }}

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Tooltip from '@mui/material/Tooltip';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -13,9 +15,10 @@ type CustomerTableToolbarProps = {
   numSelected: number;
   filterName: string;
   onFilterName: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onDelete: () => void;
 };
 
-export function CustomerTableToolbar({ numSelected, filterName, onFilterName }: CustomerTableToolbarProps) {
+export function CustomerTableToolbar({ numSelected, filterName, onFilterName, onDelete }: CustomerTableToolbarProps) {
   return (
     <Toolbar
       sx={{
@@ -50,7 +53,7 @@ export function CustomerTableToolbar({ numSelected, filterName, onFilterName }: 
 
       {numSelected > 0 ? (
         <Tooltip title="Delete">
-          <IconButton>
+          <IconButton onClick={onDelete}>
             <Iconify icon="solar:trash-bin-trash-bold" />
           </IconButton>
         </Tooltip>
