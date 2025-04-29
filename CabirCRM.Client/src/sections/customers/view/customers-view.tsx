@@ -1,4 +1,6 @@
-import { useMemo, useState } from 'react';
+import type { Customer } from 'src/models';
+
+import React, { useMemo, useState, useCallback } from 'react';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -11,21 +13,18 @@ import TablePagination from '@mui/material/TablePagination';
 
 import { useCustomers } from 'src/hooks/use-customers';
 
+import { useTable } from 'src/hooks';
 import { DashboardContent } from 'src/layouts/dashboard';
 
 import { Iconify } from 'src/components/iconify';
 import { Scrollbar } from 'src/components/scrollbar';
+import { CustomerDialog } from 'src/components/dialogs/customer-dialog';
+import { emptyRows, TableNoData, getComparator, TableEmptyRows } from 'src/components/table';
 
-import { useTable } from '../../../hooks';
-import {  applyFilter } from '../customer-filter';
+import { applyFilter } from '../customer-filter';
 import { CustomerTableRow } from '../customer-table-row';
-import { TableNoData } from '../../common/table-no-data';
 import { CustomerTableHead } from '../customer-table-head';
-import { TableEmptyRows } from '../../common/table-empty-rows';
 import { CustomerTableToolbar } from '../customer-table-toolbar';
-import { emptyRows, getComparator } from '../../common/table-utils';
-
-import type { Customer } from '../../../models';
 
 // ----------------------------------------------------------------------
 
@@ -34,12 +33,26 @@ export function CustomersView() {
 
   const [filterName, setFilterName] = useState('');
 
+  const [openDialog, setOpenDialog] = useState(false);
+  const [editingCustomer, setEditingCustomer] = useState<Customer | null>(null);
+
+  const handleOpenNew = () => {
+    setEditingCustomer(null);
+    setOpenDialog(true);
+  };
+
+  const handleCloseDialog = useCallback(() => {
+    setOpenDialog(false);
+    setEditingCustomer(null);
+    fetchCustomers().then((r) => {});
+  }, []);
+
   const paginationParams = useMemo(
     () => ({ pageNumber: table.page, pageSize: table.rowsPerPage }),
     [table.page, table.rowsPerPage]
   );
 
-  const { data: customers = [] } = useCustomers(paginationParams);
+  const { data: customers = [], fetchCustomers } = useCustomers(paginationParams);
 
   const dataFiltered: Customer[] = applyFilter({
     inputData: customers,
@@ -65,6 +78,7 @@ export function CustomersView() {
           variant="contained"
           color="inherit"
           startIcon={<Iconify icon="mingcute:add-line" />}
+          onClick={handleOpenNew}
         >
           New Customer
         </Button>
@@ -139,6 +153,13 @@ export function CustomersView() {
           onRowsPerPageChange={table.onChangeRowsPerPage}
         />
       </Card>
+
+      <CustomerDialog
+        open={openDialog}
+        onClose={handleCloseDialog}
+        onSuccess={handleCloseDialog}
+        customerToEdit={editingCustomer}
+      />
     </DashboardContent>
   );
 }

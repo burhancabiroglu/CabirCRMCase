@@ -13,15 +13,13 @@ import { useUsers } from 'src/hooks/use-users';
 import { DashboardContent } from 'src/layouts/dashboard';
 
 import { Scrollbar } from 'src/components/scrollbar';
+import { emptyRows , TableNoData , getComparator, TableEmptyRows } from 'src/components/table';
 
 import { useTable } from '../../../hooks';
 import {  applyFilter } from '../user-filter';
 import { UserTableRow } from '../user-table-row';
 import { UserTableHead } from '../user-table-head';
 import { UserTableToolbar } from '../user-table-toolbar';
-import { TableNoData } from '../../common/table-no-data';
-import { TableEmptyRows } from '../../common/table-empty-rows';
-import { emptyRows, getComparator } from '../../common/table-utils';
 
 import type { User } from '../../../models';
 

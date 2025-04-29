@@ -14,9 +14,14 @@ import MenuItem, { menuItemClasses } from '@mui/material/MenuItem';
 
 import { useRouter, usePathname } from 'src/routes/hooks';
 
-import { _myAccount } from 'src/_mock';
-
 // ----------------------------------------------------------------------
+
+const _myAccount = {
+  displayName: 'Jaydon Frankie',
+  email: 'demo@minimals.cc',
+  photoURL: '/assets/images/avatar/avatar-25.webp',
+};
+
 
 export type AccountPopoverProps = IconButtonProps & {
   data?: {

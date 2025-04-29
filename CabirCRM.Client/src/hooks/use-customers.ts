@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 import { CustomerClient } from '../clients';
 
-import type { Customer, PaginationParams } from '../models';
+import type { Customer, PaginationParams, CustomerUpdateRequest } from '../models';
 
 // ----------------------------------------------------------------------
 
@@ -15,21 +15,31 @@ export function useCustomers(params?: PaginationParams) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchCustomers = async () => {
-      try {
-        setLoading(true);
-        const result = await customerClient.getAll(params);
-        setData(result);
-      } catch (err: any) {
-        setError(err.message || 'Failed to fetch customers');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchCustomers().then(r => {});
+  const fetchCustomers = useCallback(async () => {
+    try {
+      setLoading(true);
+      const result = await customerClient.getAll(params);
+      setData(result);
+    } catch (err: any) {
+      setError(err.message || 'Failed to fetch customers');
+    } finally {
+      setLoading(false);
+    }
   }, [params]);
 
-  return { data, loading, error };
+  const updateCustomer = async (id: string, request: CustomerUpdateRequest) => {
+    await customerClient.update(id, request);
+    await fetchCustomers();
+  };
+
+  useEffect(() => {
+    fetchCustomers().then(r => {});
+  }, [fetchCustomers]);
+
+  const createCustomer = async (customer: Omit<Customer, 'id' | 'registrationDate'>) => {
+    await customerClient.create(customer);
+    await fetchCustomers();
+  };
+
+  return { data, loading, error, createCustomer, updateCustomer, fetchCustomers };
 }
