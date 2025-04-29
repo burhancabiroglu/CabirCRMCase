@@ -37,7 +37,7 @@ public class UsersController(
         }
         var passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
 
-        var user = new User(Guid.NewGuid(), request.Username, passwordHash, request.Role);
+        var user = new User(Guid.NewGuid(),request.Email ,request.Username, passwordHash, request.Role);
         await userRepository.AddAsync(user);
         
         logger.LogInformation(
@@ -112,14 +112,14 @@ public class UsersController(
     public async Task<IActionResult> Login([FromBody] LoginRequest request)
     {
         var users = await userRepository.GetAllAsync();
-        var existingUser = users.FirstOrDefault(x => x.Username == request.Username);
+        var existingUser = users.FirstOrDefault(x => x.Email == request.Email);
 
         if (existingUser == null || !BCrypt.Net.BCrypt.Verify(request.Password, existingUser.PasswordHash))
         {
             logger.LogWarning(
                 "Login attempt failed. Context: {Context}, Username: {Username}",
                 $"{nameof(UsersController)}.{nameof(Login)}",
-                request.Username
+                request.Email
             );
             return Unauthorized(new { message = "Invalid credentials" });
         }
@@ -130,14 +130,22 @@ public class UsersController(
         var expiresInMinutes = int.Parse(jwtSettings["ExpiresInMinutes"] ?? "60");
 
         logger.LogInformation(
-            "User login successful. Context: {Context}, Username: {Username}",
+            "User login successful. Context: {Context}, Email: {Email}",
             $"{nameof(UsersController)}.{nameof(Login)}",
-            request.Username
+            request.Email
         );
 
         return Ok(new LoginResponse(
             Token: token,
-            Expiration: DateTime.UtcNow.AddMinutes(expiresInMinutes)
+            Expiration: DateTime.UtcNow.AddMinutes(expiresInMinutes),
+            User: new UserDto
+            {
+                Id = existingUser.Id,
+                Username = existingUser.Username,
+                Role = existingUser.Role,
+                CreatedAt = existingUser.CreatedAt,
+                UpdatedAt = existingUser.UpdatedAt
+            }
         ));
     }
     
