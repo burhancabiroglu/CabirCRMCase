@@ -10,6 +10,7 @@ import type { AuthResponse, LoginRequest } from '../models';
 
 type AuthContextType = {
   isAuthenticated: boolean;
+  isInitialized: boolean;
   login: (credentials: LoginRequest) => Promise<void>;
   logout: () => void;
 };
@@ -19,10 +20,12 @@ const authClient = new AuthClient();
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+  const [isInitialized, setIsInitialized] = useState<boolean>(false);
 
   useEffect(() => {
     const token = localStorage.getItem('access_token');
     setIsAuthenticated(!!token);
+    setIsInitialized(true);
   }, []);
 
   const login = async (credentials: LoginRequest) => {
@@ -37,7 +40,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, isInitialized, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

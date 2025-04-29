@@ -11,7 +11,11 @@ type GuestRouteProps = {
 };
 
 export function GuestRoute({ children }: GuestRouteProps) {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, isInitialized } = useAuth();
+
+  if (!isInitialized) {
+    return null;
+  }
 
   if (isAuthenticated) {
     return <Navigate to="/" replace />;
