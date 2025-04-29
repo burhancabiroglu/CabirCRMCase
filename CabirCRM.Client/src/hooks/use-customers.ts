@@ -41,5 +41,10 @@ export function useCustomers(params?: PaginationParams) {
     await fetchCustomers();
   };
 
-  return { data, loading, error, createCustomer, updateCustomer, fetchCustomers };
+  const deleteCustomer = async (id: string) => {
+    await customerClient.delete(id);
+    await fetchCustomers();
+  };
+
+  return { data, loading, error, createCustomer, updateCustomer, deleteCustomer, fetchCustomers };
 }

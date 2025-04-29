@@ -5,7 +5,9 @@ import React, { useMemo, useState, useCallback } from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import Table from '@mui/material/Table';
+import Alert from '@mui/material/Alert';
 import Button from '@mui/material/Button';
+import Snackbar from '@mui/material/Snackbar';
 import TableBody from '@mui/material/TableBody';
 import Typography from '@mui/material/Typography';
 import TableContainer from '@mui/material/TableContainer';
@@ -18,7 +20,7 @@ import { DashboardContent } from 'src/layouts/dashboard';
 
 import { Iconify } from 'src/components/iconify';
 import { Scrollbar } from 'src/components/scrollbar';
-import { CustomerDialog } from 'src/components/dialogs/customer-dialog';
+import { ConfirmDialog , CustomerDialog } from 'src/components/dialogs';
 import { emptyRows, TableNoData, getComparator, TableEmptyRows } from 'src/components/table';
 
 import { applyFilter } from '../customer-filter';
@@ -35,6 +37,8 @@ export function CustomersView() {
 
   const [openDialog, setOpenDialog] = useState(false);
   const [editingCustomer, setEditingCustomer] = useState<Customer | null>(null);
+  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
+  const [deleteSuccess, setDeleteSuccess] = useState(false);
 
   const handleOpenNew = () => {
     setEditingCustomer(null);
@@ -44,15 +48,24 @@ export function CustomersView() {
   const handleCloseDialog = useCallback(() => {
     setOpenDialog(false);
     setEditingCustomer(null);
-    fetchCustomers().then((r) => {});
+    fetchCustomers().then(() => {});
   }, []);
+
+  const handleEditRow = (customer: Customer) => {
+    setEditingCustomer(customer);
+    setOpenDialog(true);
+  };
+
+  const handleDeleteRow = (id: string) => {
+    setConfirmDeleteId(id);
+  };
 
   const paginationParams = useMemo(
     () => ({ pageNumber: table.page, pageSize: table.rowsPerPage }),
     [table.page, table.rowsPerPage]
   );
 
-  const { data: customers = [], fetchCustomers } = useCustomers(paginationParams);
+  const { data: customers = [], fetchCustomers, deleteCustomer } = useCustomers(paginationParams);
 
   const dataFiltered: Customer[] = applyFilter({
     inputData: customers,
@@ -61,6 +74,8 @@ export function CustomersView() {
   });
 
   const notFound = !dataFiltered.length && !!filterName;
+
+  console.log(table.rowsPerPage);
 
   return (
     <DashboardContent>
@@ -129,6 +144,8 @@ export function CustomersView() {
                       row={row}
                       selected={table.selected.includes(row.id)}
                       onSelectRow={() => table.onSelectRow(row.id)}
+                      onEditRow={() => handleEditRow(row)}
+                      onDeleteRow={() => handleDeleteRow(row.id)}
                     />
                   ))}
 
@@ -160,6 +177,45 @@ export function CustomersView() {
         onSuccess={handleCloseDialog}
         customerToEdit={editingCustomer}
       />
+
+      <ConfirmDialog
+        open={!!confirmDeleteId}
+        content="Are you sure you want to delete this customer?"
+        onClose={() => setConfirmDeleteId(null)}
+        onConfirm={async () => {
+          if (confirmDeleteId) {
+            await deleteCustomer(confirmDeleteId);
+            setConfirmDeleteId(null);
+            fetchCustomers();
+            setDeleteSuccess(true);
+          }
+        }}
+      />
+
+      <Snackbar
+        open={deleteSuccess}
+        autoHideDuration={4000}
+        onClose={() => setDeleteSuccess(false)}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        sx={{ maxWidth: 320 }}
+      >
+        <Alert
+          onClose={() => setDeleteSuccess(false)}
+          severity="success"
+          variant="filled"
+          sx={{
+            width: '100%',
+            typography: 'body2',
+            bgcolor: 'success.lighter',
+            color: 'success.darker',
+            boxShadow: 0,
+            borderRadius: 1,
+            alignItems: 'center',
+          }}
+        >
+          Customer deleted successfully!
+        </Alert>
+      </Snackbar>
     </DashboardContent>
   );
 }

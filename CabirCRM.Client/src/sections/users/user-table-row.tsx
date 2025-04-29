@@ -1,4 +1,6 @@
-import { useState, useCallback } from 'react';
+import type { User } from 'src/models';
+
+import React, { useState, useCallback } from 'react';
 
 import Box from '@mui/material/Box';
 import Popover from '@mui/material/Popover';
@@ -13,8 +15,6 @@ import { fDate } from 'src/utils/format-time';
 
 import { Label } from 'src/components/label';
 import { Iconify } from 'src/components/iconify';
-
-import type {User} from "src/models";
 
 // ----------------------------------------------------------------------
 
@@ -56,14 +56,12 @@ export function UserTableRow({ row, selected, onSelectRow }: UserTableRowProps) 
 
         <TableCell>{row.email}</TableCell>
 
-          <TableCell>
-              <Label color={(row.role === 'Admin' ? 'primary' : 'secondary')}>{row.role}</Label>
-          </TableCell>
-
         <TableCell>
-          {fDate(row.createdAt)}
+          <Label color={row.role === 'Admin' ? 'primary' : 'secondary'}>{row.role}</Label>
         </TableCell>
-          <TableCell align="right">
+
+        <TableCell>{fDate(row.createdAt)}</TableCell>
+        <TableCell align="right">
           <IconButton onClick={handleOpenPopover}>
             <Iconify icon="eva:more-vertical-fill" />
           </IconButton>

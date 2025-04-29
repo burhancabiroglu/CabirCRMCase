@@ -21,9 +21,11 @@ type CustomerTableRowProps = {
   row: Customer;
   selected: boolean;
   onSelectRow: () => void;
+  onEditRow: () => void;
+  onDeleteRow: () => void;
 };
 
-export function CustomerTableRow({ row, selected, onSelectRow }: CustomerTableRowProps) {
+export function CustomerTableRow({ row, selected, onSelectRow, onEditRow, onDeleteRow }: CustomerTableRowProps) {
   const [openPopover, setOpenPopover] = useState<HTMLButtonElement | null>(null);
 
   const handleOpenPopover = useCallback((event: React.MouseEvent<HTMLButtonElement>) => {
@@ -91,12 +93,23 @@ export function CustomerTableRow({ row, selected, onSelectRow }: CustomerTableRo
             },
           }}
         >
-          <MenuItem onClick={handleClosePopover}>
+          <MenuItem
+            onClick={() => {
+              handleClosePopover();
+              onEditRow();
+            }}
+          >
             <Iconify icon="solar:pen-bold" />
             Edit
           </MenuItem>
 
-          <MenuItem onClick={handleClosePopover} sx={{ color: 'error.main' }}>
+          <MenuItem
+            onClick={() => {
+              handleClosePopover();
+              onDeleteRow();
+            }}
+            sx={{ color: 'error.main' }}
+          >
             <Iconify icon="solar:trash-bin-trash-bold" />
             Delete
           </MenuItem>
