@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CabirCRM.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd6f7abeae88089118965eb8bce85a63ee60fa8e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55e8638345e4a9f2be7568d6fb61cc59640fe061")]
 [assembly: System.Reflection.AssemblyProductAttribute("CabirCRM.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CabirCRM.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

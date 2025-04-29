@@ -13,11 +13,18 @@ import { logoClasses } from './classes';
 // ----------------------------------------------------------------------
 
 export type LogoProps = LinkProps & {
-  isSingle?: boolean;
   disabled?: boolean;
+  transparent?: boolean;
 };
 
-export function Logo({ sx, disabled, className, href = '/', ...other }: LogoProps) {
+export function Logo({
+  sx,
+  transparent = false,
+  disabled,
+  className,
+  href = '/',
+  ...other
+}: LogoProps) {
   return (
     <LogoRoot
       component={RouterLink}
@@ -35,7 +42,7 @@ export function Logo({ sx, disabled, className, href = '/', ...other }: LogoProp
     >
       <Box
         sx={{
-          backgroundColor: '#F2F3F5',
+          backgroundColor: transparent ? 'transparent' : '#F2F3F5',
           borderRadius: '12px',
           display: 'flex',
           justifyContent: 'flex-start',

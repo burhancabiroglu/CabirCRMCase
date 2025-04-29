@@ -34,8 +34,8 @@ export function SignInView() {
     >
       <TextField
         fullWidth
-        name="email"
-        label="Email address"
+        name="username"
+        label="Username"
         defaultValue="hello@gmail.com"
         sx={{ mb: 3 }}
         slotProps={{
@@ -43,9 +43,12 @@ export function SignInView() {
         }}
       />
 
-      <Link variant="body2" color="inherit" sx={{ mb: 1.5 }}>
+      {/*
+        <Link variant="body2" color="inherit" sx={{ mb: 1.5 }}>
         Forgot password?
       </Link>
+      */
+      }
 
       <TextField
         fullWidth
@@ -111,7 +114,7 @@ export function SignInView() {
           variant="overline"
           sx={{ color: 'text.secondary', fontWeight: 'fontWeightMedium' }}
         >
-          OR
+          Demo Account
         </Typography>
       </Divider>
       <Box
@@ -119,17 +122,31 @@ export function SignInView() {
           gap: 1,
           display: 'flex',
           justifyContent: 'center',
+          flexDirection: 'column',
+          alignItems: 'center',
         }}
       >
-        <IconButton color="inherit">
-          <Iconify width={22} icon="socials:google" />
-        </IconButton>
-        <IconButton color="inherit">
-          <Iconify width={22} icon="socials:github" />
-        </IconButton>
-        <IconButton color="inherit">
-          <Iconify width={22} icon="socials:twitter" />
-        </IconButton>
+        <Box
+          sx={{
+            display: 'flex',
+          }}
+        >
+          <Link variant="subtitle2">Username:</Link>
+          <Typography variant="body2" sx={{ ml: 0.5, color: 'text.primary' }}>
+            admin@test
+          </Typography>
+        </Box>
+
+        <Box
+          sx={{
+            display: 'flex',
+          }}
+        >
+          <Link variant="subtitle2">Password:</Link>
+          <Typography variant="body2" sx={{ ml: 0.5, color: 'text.primary' }}>
+            sample123
+          </Typography>
+        </Box>
       </Box>
     </>
   );
