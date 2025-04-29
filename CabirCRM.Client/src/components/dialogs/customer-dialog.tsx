@@ -1,3 +1,5 @@
+import type { Customer} from 'src/models';
+
 import * as yup from 'yup';
 import { useState, useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
@@ -20,9 +22,7 @@ import {
 
 import { useCustomers } from 'src/hooks/use-customers';
 
-import { RegionOptions } from '../../models';
-
-import type { Customer} from '../../models';
+import { RegionOptions } from 'src/models';
 
 const schema = yup.object().shape({
   firstName: yup.string().required('First name is required'),

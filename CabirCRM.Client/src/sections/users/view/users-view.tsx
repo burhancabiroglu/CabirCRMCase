@@ -1,3 +1,5 @@
+import type { User } from 'src/models';
+
 import React, { useMemo, useState } from 'react';
 
 import Box from '@mui/material/Box';
@@ -10,18 +12,16 @@ import TablePagination from '@mui/material/TablePagination';
 
 import { useUsers } from 'src/hooks/use-users';
 
+import { useTable } from 'src/hooks';
 import { DashboardContent } from 'src/layouts/dashboard';
 
 import { Scrollbar } from 'src/components/scrollbar';
 import { emptyRows , TableNoData , getComparator, TableEmptyRows } from 'src/components/table';
 
-import { useTable } from '../../../hooks';
 import {  applyFilter } from '../user-filter';
 import { UserTableRow } from '../user-table-row';
 import { UserTableHead } from '../user-table-head';
 import { UserTableToolbar } from '../user-table-toolbar';
-
-import type { User } from '../../../models';
 
 // ----------------------------------------------------------------------
 

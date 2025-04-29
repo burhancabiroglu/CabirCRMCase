@@ -1,3 +1,5 @@
+import type { Customer } from 'src/models';
+
 import React, { useState, useCallback } from 'react';
 
 import Box from '@mui/material/Box';
@@ -12,8 +14,6 @@ import MenuItem, { menuItemClasses } from '@mui/material/MenuItem';
 import { Iconify } from 'src/components/iconify';
 
 import { fDate } from '../../utils/format-time';
-
-import type { Customer } from '../../models';
 
 // ----------------------------------------------------------------------
 

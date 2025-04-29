@@ -14,7 +14,7 @@ import { fDate } from 'src/utils/format-time';
 import { Label } from 'src/components/label';
 import { Iconify } from 'src/components/iconify';
 
-import type {User} from "../../models";
+import type {User} from "src/models";
 
 // ----------------------------------------------------------------------
 

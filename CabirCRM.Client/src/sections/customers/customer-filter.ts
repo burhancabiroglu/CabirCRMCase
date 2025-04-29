@@ -1,4 +1,4 @@
-import type { Customer } from '../../models';
+import type { Customer } from 'src/models';
 
 type ApplyFilterProps = {
   inputData: Customer[];
