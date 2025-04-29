@@ -15,18 +15,18 @@ import { DashboardContent } from 'src/layouts/dashboard';
 import { Iconify } from 'src/components/iconify';
 import { Scrollbar } from 'src/components/scrollbar';
 
-import { TableNoData } from '../table-no-data';
-import { UserTableRow } from '../user-table-row';
-import { UserTableHead } from '../user-table-head';
-import { TableEmptyRows } from '../table-empty-rows';
-import { UserTableToolbar } from '../user-table-toolbar';
-import { emptyRows, applyFilter, getComparator } from '../utils';
+import { TableEmptyRows } from 'src/sections/users/table-empty-rows';
 
-import type { UserProps } from '../user-table-row';
+import { TableNoData } from '../../users/table-no-data';
+import { UserTableHead } from '../../users/user-table-head';
+import { UserTableToolbar } from '../../users/user-table-toolbar';
+import { UserProps, UserTableRow } from '../../users/user-table-row';
+import { applyFilter, emptyRows, getComparator } from '../../users/utils';
+
 
 // ----------------------------------------------------------------------
 
-export function UserView() {
+export function CustomersView() {
   const table = useTable();
 
   const [filterName, setFilterName] = useState('');
