@@ -5,7 +5,7 @@ import type { Customer, PaginationParams, CustomerUpdateRequest } from '../model
 // ----------------------------------------------------------------------
 
 export class CustomerClient {
-  async getAll({page, pageSize, ...other}: PaginationParams): Promise<Customer[]> {
+  async getAll({page, pageSize, ...other}: PaginationParams = {}): Promise<Customer[]> {
     const params = { page, pageSize, ...other, };
     const response = await axios.get<Customer[]>('/customers', { params });
     return response.data;

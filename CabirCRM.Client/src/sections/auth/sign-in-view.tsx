@@ -22,7 +22,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 
 import { useRouter } from 'src/routes/hooks';
 
-import { useAuth } from 'src/hooks/use-auth';
+import { useAuth } from 'src/hooks';
 
 import { Iconify } from 'src/components/iconify';
 

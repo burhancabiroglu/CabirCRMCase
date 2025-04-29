@@ -2,7 +2,7 @@ import type { JSX } from 'react';
 
 import { Navigate, useLocation } from 'react-router';
 
-import { useAuth } from '../hooks/use-auth';
+import { useAuth } from '../hooks';
 
 // ----------------------------------------------------------------------
 

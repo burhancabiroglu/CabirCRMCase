@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useMemo, useState } from 'react';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -9,20 +9,23 @@ import Typography from '@mui/material/Typography';
 import TableContainer from '@mui/material/TableContainer';
 import TablePagination from '@mui/material/TablePagination';
 
-import { _users } from 'src/_mock';
+import { useCustomers } from 'src/hooks/use-customers';
+
 import { DashboardContent } from 'src/layouts/dashboard';
 
 import { Iconify } from 'src/components/iconify';
 import { Scrollbar } from 'src/components/scrollbar';
 
-import { TableEmptyRows } from 'src/sections/users/table-empty-rows';
+import { useTable } from '../../../hooks';
+import {  applyFilter } from '../customer-filter';
+import { CustomerTableRow } from '../customer-table-row';
+import { TableNoData } from '../../common/table-no-data';
+import { CustomerTableHead } from '../customer-table-head';
+import { TableEmptyRows } from '../../common/table-empty-rows';
+import { CustomerTableToolbar } from '../customer-table-toolbar';
+import { emptyRows, getComparator } from '../../common/table-utils';
 
-import { TableNoData } from '../../users/table-no-data';
-import { UserTableHead } from '../../users/user-table-head';
-import { UserTableToolbar } from '../../users/user-table-toolbar';
-import { UserProps, UserTableRow } from '../../users/user-table-row';
-import { applyFilter, emptyRows, getComparator } from '../../users/utils';
-
+import type { Customer } from '../../../models';
 
 // ----------------------------------------------------------------------
 
@@ -31,8 +34,15 @@ export function CustomersView() {
 
   const [filterName, setFilterName] = useState('');
 
-  const dataFiltered: UserProps[] = applyFilter({
-    inputData: _users,
+  const paginationParams = useMemo(
+    () => ({ pageNumber: table.page, pageSize: table.rowsPerPage }),
+    [table.page, table.rowsPerPage]
+  );
+
+  const { data: customers = [] } = useCustomers(paginationParams);
+
+  const dataFiltered: Customer[] = applyFilter({
+    inputData: customers,
     comparator: getComparator(table.order, table.orderBy),
     filterName,
   });
@@ -49,19 +59,19 @@ export function CustomersView() {
         }}
       >
         <Typography variant="h4" sx={{ flexGrow: 1 }}>
-          Users
+          Customers
         </Typography>
         <Button
           variant="contained"
           color="inherit"
           startIcon={<Iconify icon="mingcute:add-line" />}
         >
-          New user
+          New Customer
         </Button>
       </Box>
 
       <Card>
-        <UserTableToolbar
+        <CustomerTableToolbar
           numSelected={table.selected.length}
           filterName={filterName}
           onFilterName={(event: React.ChangeEvent<HTMLInputElement>) => {
@@ -73,24 +83,23 @@ export function CustomersView() {
         <Scrollbar>
           <TableContainer sx={{ overflow: 'unset' }}>
             <Table sx={{ minWidth: 800 }}>
-              <UserTableHead
+              <CustomerTableHead
                 order={table.order}
                 orderBy={table.orderBy}
-                rowCount={_users.length}
+                rowCount={customers.length}
                 numSelected={table.selected.length}
                 onSort={table.onSort}
                 onSelectAllRows={(checked) =>
                   table.onSelectAllRows(
                     checked,
-                    _users.map((user) => user.id)
+                    customers.map((user) => user.id)
                   )
                 }
                 headLabel={[
                   { id: 'name', label: 'Name' },
-                  { id: 'company', label: 'Company' },
-                  { id: 'role', label: 'Role' },
-                  { id: 'isVerified', label: 'Verified', align: 'center' },
-                  { id: 'status', label: 'Status' },
+                  { id: 'email', label: 'Email' },
+                  { id: 'region', label: 'Region' },
+                  { id: 'registrationDate', label: 'Registration Date' },
                   { id: '' },
                 ]}
               />
@@ -101,7 +110,7 @@ export function CustomersView() {
                     table.page * table.rowsPerPage + table.rowsPerPage
                   )
                   .map((row) => (
-                    <UserTableRow
+                    <CustomerTableRow
                       key={row.id}
                       row={row}
                       selected={table.selected.includes(row.id)}
@@ -111,7 +120,7 @@ export function CustomersView() {
 
                 <TableEmptyRows
                   height={68}
-                  emptyRows={emptyRows(table.page, table.rowsPerPage, _users.length)}
+                  emptyRows={emptyRows(table.page, table.rowsPerPage, customers.length)}
                 />
 
                 {notFound && <TableNoData searchQuery={filterName} />}
@@ -123,7 +132,7 @@ export function CustomersView() {
         <TablePagination
           component="div"
           page={table.page}
-          count={_users.length}
+          count={customers.length}
           rowsPerPage={table.rowsPerPage}
           onPageChange={table.onChangePage}
           rowsPerPageOptions={[5, 10, 25]}
@@ -132,72 +141,4 @@ export function CustomersView() {
       </Card>
     </DashboardContent>
   );
-}
-
-// ----------------------------------------------------------------------
-
-export function useTable() {
-  const [page, setPage] = useState(0);
-  const [orderBy, setOrderBy] = useState('name');
-  const [rowsPerPage, setRowsPerPage] = useState(5);
-  const [selected, setSelected] = useState<string[]>([]);
-  const [order, setOrder] = useState<'asc' | 'desc'>('asc');
-
-  const onSort = useCallback(
-    (id: string) => {
-      const isAsc = orderBy === id && order === 'asc';
-      setOrder(isAsc ? 'desc' : 'asc');
-      setOrderBy(id);
-    },
-    [order, orderBy]
-  );
-
-  const onSelectAllRows = useCallback((checked: boolean, newSelecteds: string[]) => {
-    if (checked) {
-      setSelected(newSelecteds);
-      return;
-    }
-    setSelected([]);
-  }, []);
-
-  const onSelectRow = useCallback(
-    (inputValue: string) => {
-      const newSelected = selected.includes(inputValue)
-        ? selected.filter((value) => value !== inputValue)
-        : [...selected, inputValue];
-
-      setSelected(newSelected);
-    },
-    [selected]
-  );
-
-  const onResetPage = useCallback(() => {
-    setPage(0);
-  }, []);
-
-  const onChangePage = useCallback((event: unknown, newPage: number) => {
-    setPage(newPage);
-  }, []);
-
-  const onChangeRowsPerPage = useCallback(
-    (event: React.ChangeEvent<HTMLInputElement>) => {
-      setRowsPerPage(parseInt(event.target.value, 10));
-      onResetPage();
-    },
-    [onResetPage]
-  );
-
-  return {
-    page,
-    order,
-    onSort,
-    orderBy,
-    selected,
-    rowsPerPage,
-    onSelectRow,
-    onResetPage,
-    onChangePage,
-    onSelectAllRows,
-    onChangeRowsPerPage,
-  };
 }

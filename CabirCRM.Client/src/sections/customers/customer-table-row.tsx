@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 
 import Box from '@mui/material/Box';
 import Popover from '@mui/material/Popover';
@@ -9,22 +9,21 @@ import TableCell from '@mui/material/TableCell';
 import IconButton from '@mui/material/IconButton';
 import MenuItem, { menuItemClasses } from '@mui/material/MenuItem';
 
-import { fDate } from 'src/utils/format-time';
-
-import { Label } from 'src/components/label';
 import { Iconify } from 'src/components/iconify';
 
-import type {User} from "../../models";
+import { fDate } from '../../utils/format-time';
+
+import type { Customer } from '../../models';
 
 // ----------------------------------------------------------------------
 
-type UserTableRowProps = {
-  row: User;
+type CustomerTableRowProps = {
+  row: Customer;
   selected: boolean;
   onSelectRow: () => void;
 };
 
-export function UserTableRow({ row, selected, onSelectRow }: UserTableRowProps) {
+export function CustomerTableRow({ row, selected, onSelectRow }: CustomerTableRowProps) {
   const [openPopover, setOpenPopover] = useState<HTMLButtonElement | null>(null);
 
   const handleOpenPopover = useCallback((event: React.MouseEvent<HTMLButtonElement>) => {
@@ -50,20 +49,19 @@ export function UserTableRow({ row, selected, onSelectRow }: UserTableRowProps) 
               alignItems: 'center',
             }}
           >
-            {row.username}
+            {row.firstName + ' ' + row.lastName}
           </Box>
         </TableCell>
 
         <TableCell>{row.email}</TableCell>
 
-          <TableCell>
-              <Label color={(row.role === 'Admin' ? 'primary' : 'secondary')}>{row.role}</Label>
-          </TableCell>
+        <TableCell>{row.region}</TableCell>
 
         <TableCell>
-          {fDate(row.createdAt)}
+          {fDate(row.registrationDate)}
         </TableCell>
-          <TableCell align="right">
+
+        <TableCell align="right">
           <IconButton onClick={handleOpenPopover}>
             <Iconify icon="eva:more-vertical-fill" />
           </IconButton>

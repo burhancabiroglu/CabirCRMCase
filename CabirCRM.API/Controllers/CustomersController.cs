@@ -41,7 +41,9 @@ public class CustomersController(
         [FromQuery] string? lastName,
         [FromQuery] string? email,
         [FromQuery] DateTime? registrationDate,
-        [FromQuery] string? region)
+        [FromQuery] string? region,
+        [FromQuery] int pageNumber = 0,
+        [FromQuery] int pageSize = 25)
     {
         var customers = await customerRepository.GetAllAsync();
 
@@ -62,19 +64,24 @@ public class CustomersController(
         if (!string.IsNullOrWhiteSpace(region))
             filteredCustomers = filteredCustomers.Where(c => c.Region.Contains(region, StringComparison.OrdinalIgnoreCase));
 
-        var result = filteredCustomers.Select(c => new CustomerDto
-        {
-            Id = c.Id,
-            FirstName = c.FirstName,
-            LastName = c.LastName,
-            Email = c.Email,
-            Region = c.Region,
-            RegistrationDate = c.RegistrationDate
-        }).ToList();
+        var result = filteredCustomers
+            .Skip(pageNumber * pageSize)
+            .Take(pageSize)
+            .Select(c => new CustomerDto
+            {
+                Id = c.Id,
+                FirstName = c.FirstName,
+                LastName = c.LastName,
+                Email = c.Email,
+                Region = c.Region,
+                RegistrationDate = c.RegistrationDate
+            }).ToList();
 
         logger.LogInformation(
-            "Retrieved customers list with optional filters. Context: {Context}, TotalCustomers: {CustomerCount}",
+            "Retrieved customers list with optional filters and pagination. Context: {Context}, PageNumber: {PageNumber}, PageSize: {PageSize}, RetrievedCustomers: {CustomerCount}",
             $"{nameof(CustomersController)}.{nameof(GetAll)}",
+            pageNumber,
+            pageSize,
             result.Count
         );
 

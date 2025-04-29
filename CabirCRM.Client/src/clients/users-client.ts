@@ -1,12 +1,13 @@
 import axios from '../api/axios';
 
-import type { User, UpdateUserRequest } from '../models';
+import type { User, PaginationParams, UpdateUserRequest } from '../models';
 
 // ----------------------------------------------------------------------
 
 export class UserClient {
-  async getAll(): Promise<User[]> {
-    const response = await axios.get<User[]>('/users');
+  async getAll({ page, pageSize, ...other }: PaginationParams = {}): Promise<User[]> {
+    const params = { page, pageSize, ...other, };
+    const response = await axios.get<User[]>('/users', { params });
     return response.data;
   }
 

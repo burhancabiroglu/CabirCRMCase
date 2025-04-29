@@ -1,5 +1,5 @@
 export type PaginationParams = {
-  page?: number;
+  pageNumber?: number;
   pageSize?: number;
   [key: string]: any;
 }

@@ -54,21 +54,30 @@ public class UsersController(
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAll()
+    public async Task<IActionResult> GetAll(
+        [FromQuery] int pageNumber = 0,
+        [FromQuery] int pageSize = 25)
     {
         var users = await userRepository.GetAllAsync();
-        var result = users.Select(u => new UserDto
-        {
-            Id = u.Id,
-            Username = u.Username,
-            Role = u.Role,
-            CreatedAt = u.CreatedAt,
-            UpdatedAt = u.UpdatedAt
-        }).ToList();
+        var result = users
+            .Skip(pageNumber * pageSize)
+            .Take(pageSize)
+            .Select(u => new UserDto
+            {
+                Id = u.Id,
+                Username = u.Username,
+                Role = u.Role,
+                CreatedAt = u.CreatedAt,
+                UpdatedAt = u.UpdatedAt,
+                Email = u.Email
+            })
+            .ToList();
 
         logger.LogInformation(
-            "Retrieved users list. Context: {Context}, TotalUsers: {UserCount}",
+            "Retrieved users list with pagination. Context: {Context}, PageNumber: {PageNumber}, PageSize: {PageSize}, RetrievedUsers: {UserCount}",
             $"{nameof(UsersController)}.{nameof(GetAll)}",
+            pageNumber,
+            pageSize,
             result.Count
         );
 
@@ -93,9 +102,10 @@ public class UsersController(
         {
             Id = user.Id,
             Username = user.Username,
+            Email = user.Email,
             Role = user.Role,
             CreatedAt = user.CreatedAt,
-            UpdatedAt = user.UpdatedAt
+            UpdatedAt = user.UpdatedAt,
         };
 
         logger.LogInformation(
@@ -144,7 +154,8 @@ public class UsersController(
                 Username = existingUser.Username,
                 Role = existingUser.Role,
                 CreatedAt = existingUser.CreatedAt,
-                UpdatedAt = existingUser.UpdatedAt
+                UpdatedAt = existingUser.UpdatedAt,
+                Email =  existingUser.Email
             }
         ));
     }
@@ -194,7 +205,8 @@ public class UsersController(
             Username = user.Username,
             Role = user.Role,
             CreatedAt = user.CreatedAt,
-            UpdatedAt = user.UpdatedAt
+            UpdatedAt = user.UpdatedAt,
+            Email = user.Email
         };
 
         logger.LogInformation(

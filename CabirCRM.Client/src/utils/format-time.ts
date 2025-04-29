@@ -6,27 +6,6 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 
 // ----------------------------------------------------------------------
 
-/**
- * @Docs
- * https://day.js.org/docs/en/display/format
- */
-
-/**
- * Default timezones
- * https://day.js.org/docs/en/timezone/set-default-timezone#docsNav
- *
- */
-
-/**
- * UTC
- * https://day.js.org/docs/en/plugin/utc
- * @install
- * import utc from 'dayjs/plugin/utc';
- * dayjs.extend(utc);
- * @usage
- * dayjs().utc().format()
- *
- */
 
 dayjs.extend(duration);
 dayjs.extend(relativeTime);
