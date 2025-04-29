@@ -1,6 +1,6 @@
 import axios from '../api/axios';
 
-import type { AuthResponse, LoginRequest, RegisterRequest } from '../models/auth';
+import type { AuthResponse, LoginRequest, RegisterRequest } from '../models';
 
 // ----------------------------------------------------------------------
 
@@ -15,7 +15,7 @@ export class AuthClient {
   }
 
   async logout(): Promise<void> {
-    await axios.post('/auth/logout'); // Eğer backend bu endpointi destekliyorsa
+    await axios.post('/auth/logout');
   }
 
   async refreshToken(refreshToken: string): Promise<AuthResponse> {

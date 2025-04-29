@@ -1,12 +1,13 @@
 import axios from '../api/axios';
 
-import type { Customer, CustomerUpdateRequest } from '../models/customer';
+import type { Customer, PaginationParams, CustomerUpdateRequest } from '../models';
 
 // ----------------------------------------------------------------------
 
 export class CustomerClient {
-  async getAll(): Promise<Customer[]> {
-    const response = await axios.get<Customer[]>('/customers');
+  async getAll({page, pageSize, ...other}: PaginationParams): Promise<Customer[]> {
+    const params = { page, pageSize, ...other, };
+    const response = await axios.get<Customer[]>('/customers', { params });
     return response.data;
   }
 

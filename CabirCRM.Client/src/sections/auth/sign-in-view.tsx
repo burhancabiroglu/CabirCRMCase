@@ -34,9 +34,9 @@ export function SignInView() {
     >
       <TextField
         fullWidth
-        name="username"
-        label="Username"
-        defaultValue="hello@gmail.com"
+        name="email"
+        label="Email"
+        defaultValue=""
         sx={{ mb: 3 }}
         slotProps={{
           inputLabel: { shrink: true },
@@ -54,7 +54,7 @@ export function SignInView() {
         fullWidth
         name="password"
         label="Password"
-        defaultValue="@demo1234"
+        defaultValue=""
         type={showPassword ? 'text' : 'password'}
         slotProps={{
           inputLabel: { shrink: true },
@@ -131,9 +131,9 @@ export function SignInView() {
             display: 'flex',
           }}
         >
-          <Link variant="subtitle2">Username:</Link>
+          <Link variant="subtitle2">Email:</Link>
           <Typography variant="body2" sx={{ ml: 0.5, color: 'text.primary' }}>
-            admin@test
+            admin@test.com
           </Typography>
         </Box>
 

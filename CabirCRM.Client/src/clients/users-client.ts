@@ -1,7 +1,6 @@
 import axios from '../api/axios';
 
-import type { User } from '../models/user';
-import type { UpdateUserRequest } from '../models/auth';
+import type { User, UpdateUserRequest } from '../models';
 
 // ----------------------------------------------------------------------
 
