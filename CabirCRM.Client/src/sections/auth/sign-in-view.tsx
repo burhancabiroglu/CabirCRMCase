@@ -1,3 +1,14 @@
+import * as yup from 'yup';
+import { useForm, Controller } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+
+import Alert from '@mui/material/Alert';
+import Snackbar from '@mui/material/Snackbar';
+
+const schema = yup.object().shape({
+  email: yup.string().email('Invalid email format').required('Email is required'),
+  password: yup.string().required('Password is required'),
+});
 import { useState, useCallback } from 'react';
 
 import Box from '@mui/material/Box';
@@ -11,64 +22,99 @@ import InputAdornment from '@mui/material/InputAdornment';
 
 import { useRouter } from 'src/routes/hooks';
 
+import { useAuth } from 'src/hooks/use-auth';
+
 import { Iconify } from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 
 export function SignInView() {
   const router = useRouter();
+  const { login } = useAuth();
 
   const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSignIn = useCallback(() => {
-    router.push('/');
-  }, [router]);
+  const { control, handleSubmit, formState: { errors } } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit = useCallback(
+    async (data: any) => {
+      try {
+        setLoading(true);
+        setError(null);
+        await login(data);
+        router.push('/');
+      } catch (err: any) {
+        const message = err?.response?.data?.message || 'Login failed';
+        setError(message);
+      } finally {
+        setLoading(false);
+      }
+    },
+    [login, router]
+  );
 
   const renderForm = (
     <Box
+      component="form"
+      onSubmit={handleSubmit(onSubmit)}
       sx={{
         display: 'flex',
         alignItems: 'flex-end',
         flexDirection: 'column',
       }}
     >
-      <TextField
-        fullWidth
+      <Controller
         name="email"
-        label="Email"
+        control={control}
         defaultValue=""
-        sx={{ mb: 3 }}
-        slotProps={{
-          inputLabel: { shrink: true },
-        }}
+        render={({ field }) => (
+          <TextField
+            {...field}
+            fullWidth
+            label="Email"
+            sx={{ mb: 3 }}
+            error={!!errors.email}
+            helperText={errors.email?.message}
+          />
+        )}
       />
 
       {/*
         <Link variant="body2" color="inherit" sx={{ mb: 1.5 }}>
         Forgot password?
       </Link>
-      */
-      }
+      */}
 
-      <TextField
-        fullWidth
+      <Controller
         name="password"
-        label="Password"
+        control={control}
         defaultValue=""
-        type={showPassword ? 'text' : 'password'}
-        slotProps={{
-          inputLabel: { shrink: true },
-          input: {
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton onClick={() => setShowPassword(!showPassword)} edge="end">
-                  <Iconify icon={showPassword ? 'solar:eye-bold' : 'solar:eye-closed-bold'} />
-                </IconButton>
-              </InputAdornment>
-            ),
-          },
-        }}
-        sx={{ mb: 3 }}
+        render={({ field }) => (
+          <TextField
+            {...field}
+            fullWidth
+            label="Password"
+            type={showPassword ? 'text' : 'password'}
+            sx={{ mb: 3 }}
+            error={!!errors.password}
+            helperText={errors.password?.message}
+            slotProps={{
+              input: {
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton onClick={() => setShowPassword(!showPassword)} edge="end">
+                      <Iconify icon={showPassword ? 'solar:eye-bold' : 'solar:eye-closed-bold'} />
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              }
+            }}
+          />
+        )}
       />
 
       <Button
@@ -77,7 +123,7 @@ export function SignInView() {
         type="submit"
         color="inherit"
         variant="contained"
-        onClick={handleSignIn}
+        disabled={loading}
       >
         Sign in
       </Button>
@@ -133,7 +179,7 @@ export function SignInView() {
         >
           <Link variant="subtitle2">Email:</Link>
           <Typography variant="body2" sx={{ ml: 0.5, color: 'text.primary' }}>
-            admin@test.com
+            testuser@mail.com
           </Typography>
         </Box>
 
@@ -144,10 +190,21 @@ export function SignInView() {
         >
           <Link variant="subtitle2">Password:</Link>
           <Typography variant="body2" sx={{ ml: 0.5, color: 'text.primary' }}>
-            sample123
+            Test1234!
           </Typography>
         </Box>
       </Box>
+      <Snackbar
+        open={!!error}
+        autoHideDuration={6000}
+        onClose={() => setError(null)}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+      >
+        <Alert severity="error" onClose={() => setError(null)} sx={{ width: '100%' }}>
+          {error}
+        </Alert>
+      </Snackbar>
     </>
   );
 }
+

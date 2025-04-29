@@ -14,7 +14,7 @@ export function GuestRoute({ children }: GuestRouteProps) {
   const { isAuthenticated } = useAuth();
 
   if (isAuthenticated) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return children;

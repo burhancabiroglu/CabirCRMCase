@@ -15,10 +15,8 @@ builder.Services
     .AddAuthorizationPolicies()
     .AddExceptionHandler<GlobalExceptionHandler>()
     .AddSwaggerGen()
-    .AddRouting(options =>
-{
-    options.LowercaseUrls = true;
-});
+    .AddCorsPolicy(builder.Configuration)
+    .AddRouting(options => { options.LowercaseUrls = true; });
 
 var app = builder.Build();
 var logger = app.Services.GetRequiredService<ILogger<Program>>();
@@ -41,6 +39,7 @@ app.MapControllers();
 
 app.MapSwagger();
 app.UseSwaggerUI();
+app.UseCors();
 
 logger.LogInformation("Application is listening on: {Urls}", string.Join(", ", app.Urls));
 app.Run();

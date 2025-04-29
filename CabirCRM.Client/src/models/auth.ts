@@ -20,7 +20,7 @@ export type UpdateUserRequest  = {
 export type AuthResponse = {
   token: string;
   refreshToken?: string;
-  expiresIn?: number;
+  Expiration?: string;
   user: {
     id: string;
     username: string;
