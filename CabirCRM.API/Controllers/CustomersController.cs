@@ -2,6 +2,7 @@ using CabirCRM.Application.DTOs;
 using CabirCRM.Application.Interfaces;
 using CabirCRM.Application.Requests.Customers;
 using CabirCRM.Application.Responses.Customers;
+using CabirCRM.Application.Responses.Common;
 using CabirCRM.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -77,6 +78,14 @@ public class CustomersController(
                 RegistrationDate = c.RegistrationDate
             }).ToList();
 
+        var response = new PaginationResponse<CustomerDto>
+        {
+            PageNumber = pageNumber,
+            PageSize = pageSize,
+            TotalCount = filteredCustomers.Count(),
+            Data = result
+        };
+
         logger.LogInformation(
             "Retrieved customers list with optional filters and pagination. Context: {Context}, PageNumber: {PageNumber}, PageSize: {PageSize}, RetrievedCustomers: {CustomerCount}",
             $"{nameof(CustomersController)}.{nameof(GetAll)}",
@@ -85,7 +94,7 @@ public class CustomersController(
             result.Count
         );
 
-        return Ok(result);
+        return Ok(response);
     }
 
     [Authorize(Policy = "AdminOnly")]

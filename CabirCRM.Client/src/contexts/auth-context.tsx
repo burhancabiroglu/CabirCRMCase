@@ -4,7 +4,7 @@ import { useState , useEffect, createContext } from 'react';
 
 import { AuthClient } from '../clients';
 
-import type { AuthResponse, LoginRequest } from '../models';
+import type { AuthResponse, LoginRequest, RegisterRequest } from '../models';
 
 // ----------------------------------------------------------------------
 
@@ -13,6 +13,7 @@ type AuthContextType = {
   isInitialized: boolean;
   login: (credentials: LoginRequest) => Promise<void>;
   logout: () => void;
+  register: (credentials: RegisterRequest) => Promise<void>;
 };
 
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -34,13 +35,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setIsAuthenticated(true);
   };
 
+  const register = async (credentials: RegisterRequest) => {
+    await authClient.register(credentials);
+  };
+
   const logout = () => {
     localStorage.removeItem('access_token');
     setIsAuthenticated(false);
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, isInitialized, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, isInitialized, login, logout, register }}>
       {children}
     </AuthContext.Provider>
   );

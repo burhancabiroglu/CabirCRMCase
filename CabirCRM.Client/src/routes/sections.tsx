@@ -18,6 +18,7 @@ import { GuestRoute } from '../components/route/guest-route';
 export const UsersPage = lazy(() => import('src/pages/users'));
 export const CustomersPage = lazy(() => import('src/pages/customers'));
 export const SignInPage = lazy(() => import('src/pages/sign-in'));
+export const SignUpPage = lazy(() => import('src/pages/sign-up'));
 export const Page404 = lazy(() => import('src/pages/page-not-found'));
 
 const renderFallback = () => (
@@ -64,6 +65,16 @@ export const routesSection: RouteObject[] = [
          <SignInPage />
        </AuthLayout>
      </GuestRoute>
+    ),
+  },
+  {
+    path: 'sign-up',
+    element: (
+      <GuestRoute>
+        <AuthLayout>
+          <SignUpPage />
+        </AuthLayout>
+      </GuestRoute>
     ),
   },
   {

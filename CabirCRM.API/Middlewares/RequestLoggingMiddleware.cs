@@ -5,6 +5,12 @@ namespace CabirCRM.API.Middlewares;
 
 public class RequestLoggingMiddleware(RequestDelegate next, ILogger<RequestLoggingMiddleware> logger)
 {
+    private readonly JsonSerializerOptions _options = new()
+    {
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        WriteIndented = false
+    };
+
     public async Task InvokeAsync(HttpContext context)
     {
         var stopwatch = Stopwatch.StartNew();
@@ -24,14 +30,8 @@ public class RequestLoggingMiddleware(RequestDelegate next, ILogger<RequestLoggi
             statusCode = context.Response.StatusCode,
             durationMs = stopwatch.ElapsedMilliseconds
         };
-
-        var options = new JsonSerializerOptions
-        {
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-            WriteIndented = false
-        };
-
-        var json = JsonSerializer.Serialize(logEntry, options);
+        
+        var json = JsonSerializer.Serialize(logEntry, _options);
         logger.LogInformation(json);
     }
 }

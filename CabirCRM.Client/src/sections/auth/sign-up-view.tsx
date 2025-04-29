@@ -4,17 +4,19 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 import Alert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
+import MenuItem from '@mui/material/MenuItem';
 
 const schema = yup.object().shape({
   email: yup.string().email('Invalid email format').required('Email is required'),
+  username: yup.string().required('Username is required'),
   password: yup.string().required('Password is required'),
+  role: yup.string().required('Role is required'),
 });
 import { useState, useCallback } from 'react';
 
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
-import Divider from '@mui/material/Divider';
 import TextField from '@mui/material/TextField';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -28,13 +30,14 @@ import { Iconify } from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 
-export function SignInView() {
+export function SignUpView() {
   const router = useRouter();
-  const { login } = useAuth();
+  const { register } = useAuth();
 
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
 
   const { control, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
@@ -45,16 +48,20 @@ export function SignInView() {
       try {
         setLoading(true);
         setError(null);
-        await login(data);
-        router.push('/');
+        await register(data);
+        setSuccess(true);
+        setTimeout(() => {
+          router.push('/sign-in');
+        }, 1500);
       } catch (err: any) {
-        const message = err?.response?.data?.message || 'Login failed';
+        console.log(data);
+        const message = err?.response?.data?.message || 'Registration failed';
         setError(message);
       } finally {
         setLoading(false);
       }
     },
-    [login, router]
+    [register, router]
   );
 
   const renderForm = (
@@ -79,6 +86,22 @@ export function SignInView() {
             sx={{ mb: 3 }}
             error={!!errors.email}
             helperText={errors.email?.message}
+          />
+        )}
+      />
+
+      <Controller
+        name="username"
+        control={control}
+        defaultValue=""
+        render={({ field }) => (
+          <TextField
+            {...field}
+            fullWidth
+            label="Username"
+            sx={{ mb: 3 }}
+            error={!!errors.username}
+            helperText={errors.username?.message}
           />
         )}
       />
@@ -117,6 +140,26 @@ export function SignInView() {
         )}
       />
 
+      <Controller
+        name="role"
+        control={control}
+        defaultValue=""
+        render={({ field }) => (
+          <TextField
+            {...field}
+            fullWidth
+            select
+            label="Role"
+            sx={{ mb: 3 }}
+            error={!!errors.role}
+            helperText={errors.role?.message}
+          >
+            <MenuItem value="Admin">Admin</MenuItem>
+            <MenuItem value="Standard">Standard</MenuItem>
+          </TextField>
+        )}
+      />
+
       <Button
         fullWidth
         size="large"
@@ -125,7 +168,7 @@ export function SignInView() {
         variant="contained"
         disabled={loading}
       >
-        Sign in
+        Sign up
       </Button>
     </Box>
   );
@@ -141,59 +184,20 @@ export function SignInView() {
           mb: 5,
         }}
       >
-        <Typography variant="h5">Sign in</Typography>
+        <Typography variant="h5">Sign up</Typography>
         <Typography
           variant="body2"
           sx={{
             color: 'text.secondary',
           }}
         >
-          Don’t have an account?
-          <Link href="/sign-up" variant="subtitle2" sx={{ ml: 0.5 }}>
-            Get started
+          Already have an account?
+          <Link href="/sign-in" variant="subtitle2" sx={{ ml: 0.5 }}>
+            Sign in
           </Link>
         </Typography>
       </Box>
       {renderForm}
-      <Divider sx={{ my: 3, '&::before, &::after': { borderTopStyle: 'dashed' } }}>
-        <Typography
-          variant="overline"
-          sx={{ color: 'text.secondary', fontWeight: 'fontWeightMedium' }}
-        >
-          Demo Account
-        </Typography>
-      </Divider>
-      <Box
-        sx={{
-          gap: 1,
-          display: 'flex',
-          justifyContent: 'center',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
-        <Box
-          sx={{
-            display: 'flex',
-          }}
-        >
-          <Link variant="subtitle2">Email:</Link>
-          <Typography variant="body2" sx={{ ml: 0.5, color: 'text.primary' }}>
-            testuser@mail.com
-          </Typography>
-        </Box>
-
-        <Box
-          sx={{
-            display: 'flex',
-          }}
-        >
-          <Link variant="subtitle2">Password:</Link>
-          <Typography variant="body2" sx={{ ml: 0.5, color: 'text.primary' }}>
-            Test1234!
-          </Typography>
-        </Box>
-      </Box>
       <Snackbar
         open={!!error}
         autoHideDuration={6000}
@@ -204,7 +208,16 @@ export function SignInView() {
           {error}
         </Alert>
       </Snackbar>
+      <Snackbar
+        open={success}
+        autoHideDuration={3000}
+        onClose={() => setSuccess(false)}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+      >
+        <Alert severity="success" onClose={() => setSuccess(false)} sx={{ width: '100%' }}>
+          Registration successful!
+        </Alert>
+      </Snackbar>
     </>
   );
 }
-

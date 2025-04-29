@@ -3,7 +3,9 @@ using System.Security.Claims;
 using CabirCRM.Application.DTOs;
 using CabirCRM.Application.Interfaces;
 using CabirCRM.Application.Requests.Users;
+using CabirCRM.Application.Responses.Common;
 using CabirCRM.Application.Responses.Users;
+using CabirCRM.Application.Responses.Common;
 using CabirCRM.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -23,12 +25,26 @@ public class UsersController(
     public async Task<IActionResult> Register([FromBody] RegisterRequest request)
     {
         var existingUser = (await userRepository.GetAllAsync())
+            .FirstOrDefault(x => x.Email.Equals(request.Email, StringComparison.CurrentCultureIgnoreCase));
+
+        if (existingUser != null)
+        {
+            logger.LogWarning(
+                "Register attempt failed. Context: {Context}, Reason: {Email}, Email: {Email}",
+                $"{nameof(UsersController)}.{nameof(Register)}",
+                "Email already exists",
+                request.Email
+            );
+            return Conflict(new { message = "Email already exists." });
+        }
+        
+        existingUser = (await userRepository.GetAllAsync())
             .FirstOrDefault(x => x.Username.Equals(request.Username, StringComparison.CurrentCultureIgnoreCase));
 
         if (existingUser != null)
         {
             logger.LogWarning(
-                "Register attempt failed. Context: {Context}, Reason: {Reason}, Username: {Username}",
+                "Register attempt failed. Context: {Context}, Reason: {Username}, Username: {Username}",
                 $"{nameof(UsersController)}.{nameof(Register)}",
                 "Username already exists",
                 request.Username
@@ -81,7 +97,15 @@ public class UsersController(
             result.Count
         );
 
-        return Ok(result);
+        var response = new PaginationResponse<UserDto>
+        {
+            PageNumber = pageNumber,
+            PageSize = pageSize,
+            TotalCount = users.Count(),
+            Data = result
+        };
+
+        return Ok(response);
     }
 
     [HttpGet("{id}")]
