@@ -60,7 +60,7 @@ public class CustomersController(
             filteredCustomers = filteredCustomers.Where(c => c.Email.Contains(email, StringComparison.OrdinalIgnoreCase));
 
         if (registrationDate.HasValue)
-            filteredCustomers = filteredCustomers.Where(c => c.RegistrationDate.Date == registrationDate.Value.Date);
+            filteredCustomers = filteredCustomers.Where(c => c.RegistrationDate.Date < registrationDate.Value.Date);
 
         if (!string.IsNullOrWhiteSpace(region))
             filteredCustomers = filteredCustomers.Where(c => c.Region.Contains(region, StringComparison.OrdinalIgnoreCase));

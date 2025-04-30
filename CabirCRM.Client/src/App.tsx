@@ -3,6 +3,8 @@ import 'src/global.css';
 import { useEffect } from 'react';
 
 import Fab from '@mui/material/Fab';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
 import { usePathname } from 'src/routes/hooks';
 
@@ -10,7 +12,7 @@ import { ThemeProvider } from 'src/theme/theme-provider';
 
 import { Iconify } from 'src/components/iconify';
 
-import { AuthProvider } from './contexts/auth-context';
+import { AuthProvider } from './contexts';
 
 // ----------------------------------------------------------------------
 
@@ -42,10 +44,12 @@ export default function App({ children }: AppProps) {
 
   return (
     <AuthProvider>
-      <ThemeProvider>
-        {children}
-        {githubButton()}
-      </ThemeProvider>
+      <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <ThemeProvider>
+          {children}
+          {githubButton()}
+        </ThemeProvider>
+      </LocalizationProvider>
     </AuthProvider>
   );
 }

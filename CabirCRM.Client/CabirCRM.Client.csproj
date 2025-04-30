@@ -6,4 +6,15 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+        <ViteDistFiles Include="dist\**\*.*" />
+    </ItemGroup>
+
+    <Target Name="ViteBuild" BeforeTargets="Build">
+        <Exec Command="npm install" />
+        <Exec Command="npm run build" />
+        <RemoveDir Directories="..\CabirCRM.API\wwwroot" />
+        <MakeDir Directories="..\CabirCRM.API\wwwroot" />
+        <Copy SourceFiles="@(ViteDistFiles)" DestinationFolder="..\CabirCRM.API\wwwroot\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    </Target>
 </Project>

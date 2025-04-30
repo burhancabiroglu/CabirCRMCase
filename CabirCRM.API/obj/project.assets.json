@@ -1229,6 +1229,16 @@
           "bin/placeholder/CabirCRM.Application.dll": {}
         }
       },
+      "CabirCRM.Client/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/CabirCRM.Client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CabirCRM.Client.dll": {}
+        }
+      },
       "CabirCRM.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -1243,6 +1253,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "BCrypt.Net": "0.1.0",
           "CabirCRM.Application": "1.0.0",
           "CabirCRM.Domain": "1.0.0",
           "FluentValidation.AspNetCore": "11.3.0",
@@ -3718,6 +3729,11 @@
       "path": "../CabirCRM.Application/CabirCRM.Application.csproj",
       "msbuildProject": "../CabirCRM.Application/CabirCRM.Application.csproj"
     },
+    "CabirCRM.Client/1.0.0": {
+      "type": "project",
+      "path": "../CabirCRM.Client/CabirCRM.Client.csproj",
+      "msbuildProject": "../CabirCRM.Client/CabirCRM.Client.csproj"
+    },
     "CabirCRM.Domain/1.0.0": {
       "type": "project",
       "path": "../CabirCRM.Domain/CabirCRM.Domain.csproj",
@@ -3732,6 +3748,7 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "BCrypt.Net >= 0.1.0",
+      "CabirCRM.Client >= 1.0.0",
       "CabirCRM.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.3",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.4",
@@ -3765,6 +3782,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/CabirCRM.Client.csproj": {
+              "projectPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/CabirCRM.Client.csproj"
+            },
             "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Infrastructure/CabirCRM.Infrastructure.csproj": {
               "projectPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Infrastructure/CabirCRM.Infrastructure.csproj"
             }

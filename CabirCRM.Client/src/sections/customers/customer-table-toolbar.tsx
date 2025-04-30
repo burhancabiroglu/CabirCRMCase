@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
 import Tooltip from '@mui/material/Tooltip';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -16,9 +18,12 @@ type CustomerTableToolbarProps = {
   filterName: string;
   onFilterName: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onDelete: () => void;
+  onFilter: () => void;
+  hasActiveFilter?: boolean;
+  onClearFilters?: () => void;
 };
 
-export function CustomerTableToolbar({ numSelected, filterName, onFilterName, onDelete }: CustomerTableToolbarProps) {
+export function CustomerTableToolbar({ numSelected, filterName, onFilterName, onDelete, onFilter, hasActiveFilter, onClearFilters }: CustomerTableToolbarProps) {
   return (
     <Toolbar
       sx={{
@@ -37,18 +42,36 @@ export function CustomerTableToolbar({ numSelected, filterName, onFilterName, on
           {numSelected} selected
         </Typography>
       ) : (
-        <OutlinedInput
-          fullWidth
-          value={filterName}
-          onChange={onFilterName}
-          placeholder="Search user..."
-          startAdornment={
-            <InputAdornment position="start">
-              <Iconify width={20} icon="eva:search-fill" sx={{ color: 'text.disabled' }} />
-            </InputAdornment>
-          }
-          sx={{ maxWidth: 320 }}
-        />
+        <>
+          <OutlinedInput
+            fullWidth
+            value={filterName}
+            onChange={onFilterName}
+            placeholder="Search user..."
+            startAdornment={
+              <InputAdornment position="start">
+                <Iconify width={20} icon="eva:search-fill" sx={{ color: 'text.disabled' }} />
+              </InputAdornment>
+            }
+            sx={{ maxWidth: 320 }}
+          />
+          <Stack direction="row" alignItems="center" spacing={1} sx={{ ml: 2 }}>
+            {hasActiveFilter && (
+              <Chip
+                label="Clear filters"
+                onDelete={onClearFilters}
+                variant="filled"
+                color="primary"
+                size="small"
+              />
+            )}
+            <Tooltip title="Filter list">
+              <IconButton onClick={onFilter}>
+                <Iconify icon="ic:round-filter-list" />
+              </IconButton>
+            </Tooltip>
+          </Stack>
+        </>
       )}
 
       {numSelected > 0 ? (
@@ -57,13 +80,7 @@ export function CustomerTableToolbar({ numSelected, filterName, onFilterName, on
             <Iconify icon="solar:trash-bin-trash-bold" />
           </IconButton>
         </Tooltip>
-      ) : (
-        <Tooltip title="Filter list">
-          <IconButton>
-            <Iconify icon="ic:round-filter-list" />
-          </IconButton>
-        </Tooltip>
-      )}
+      ) : null}
     </Toolbar>
   );
 }

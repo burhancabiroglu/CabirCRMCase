@@ -1,0 +1,12 @@
+/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/bin/Debug/net9.0/CabirCRM.Client.deps.json
+/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/bin/Debug/net9.0/CabirCRM.Client.dll
+/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/bin/Debug/net9.0/CabirCRM.Client.pdb
+/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/obj/Debug/net9.0/CabirCRM.Client.GeneratedMSBuildEditorConfig.editorconfig
+/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/obj/Debug/net9.0/CabirCRM.Client.AssemblyInfoInputs.cache
+/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/obj/Debug/net9.0/CabirCRM.Client.AssemblyInfo.cs
+/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/obj/Debug/net9.0/CabirCRM.Client.csproj.CoreCompileInputs.cache
+/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/obj/Debug/net9.0/CabirCRM.Client.sourcelink.json
+/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/obj/Debug/net9.0/CabirCRM.Client.dll
+/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/obj/Debug/net9.0/refint/CabirCRM.Client.dll
+/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/obj/Debug/net9.0/CabirCRM.Client.pdb
+/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/obj/Debug/net9.0/ref/CabirCRM.Client.dll

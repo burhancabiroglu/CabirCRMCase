@@ -1,0 +1,317 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/Snackbar-CdTEUbTl.js",
+      "PackagePath": "staticwebassets/assets/Snackbar-CdTEUbTl.js"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/Stack-Bdb-YNvs.js",
+      "PackagePath": "staticwebassets/assets/Stack-Bdb-YNvs.js"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/background/overlay.jpg",
+      "PackagePath": "staticwebassets/assets/background/overlay.jpg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/background/shape-square.svg",
+      "PackagePath": "staticwebassets/assets/background/shape-square.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-400-normal-CtwdMZP0.woff2",
+      "PackagePath": "staticwebassets/assets/barlow-latin-400-normal-CtwdMZP0.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-400-normal-Gqj0RTbC.woff",
+      "PackagePath": "staticwebassets/assets/barlow-latin-400-normal-Gqj0RTbC.woff"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-500-normal-BAaAwKGi.woff",
+      "PackagePath": "staticwebassets/assets/barlow-latin-500-normal-BAaAwKGi.woff"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-500-normal-BRhHB0xN.woff2",
+      "PackagePath": "staticwebassets/assets/barlow-latin-500-normal-BRhHB0xN.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-600-normal-DMnFtVx9.woff2",
+      "PackagePath": "staticwebassets/assets/barlow-latin-600-normal-DMnFtVx9.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-600-normal-DznpAvW9.woff",
+      "PackagePath": "staticwebassets/assets/barlow-latin-600-normal-DznpAvW9.woff"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-700-normal-AkmsA7ur.woff",
+      "PackagePath": "staticwebassets/assets/barlow-latin-700-normal-AkmsA7ur.woff"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-700-normal-Bku5AOSK.woff2",
+      "PackagePath": "staticwebassets/assets/barlow-latin-700-normal-Bku5AOSK.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-800-normal-B50OFIWa.woff2",
+      "PackagePath": "staticwebassets/assets/barlow-latin-800-normal-B50OFIWa.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-800-normal-Dp3TYPAo.woff",
+      "PackagePath": "staticwebassets/assets/barlow-latin-800-normal-Dp3TYPAo.woff"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-ext-400-normal-DGsTVCL_.woff",
+      "PackagePath": "staticwebassets/assets/barlow-latin-ext-400-normal-DGsTVCL_.woff"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-ext-400-normal-DsA6LmuC.woff2",
+      "PackagePath": "staticwebassets/assets/barlow-latin-ext-400-normal-DsA6LmuC.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-ext-500-normal-B8S-Wk_i.woff",
+      "PackagePath": "staticwebassets/assets/barlow-latin-ext-500-normal-B8S-Wk_i.woff"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-ext-500-normal-D9Q9nrG3.woff2",
+      "PackagePath": "staticwebassets/assets/barlow-latin-ext-500-normal-D9Q9nrG3.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-ext-600-normal-Brs4HSvV.woff2",
+      "PackagePath": "staticwebassets/assets/barlow-latin-ext-600-normal-Brs4HSvV.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-ext-600-normal-DxfNEZIW.woff",
+      "PackagePath": "staticwebassets/assets/barlow-latin-ext-600-normal-DxfNEZIW.woff"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-ext-700-normal-BgGd7r2K.woff",
+      "PackagePath": "staticwebassets/assets/barlow-latin-ext-700-normal-BgGd7r2K.woff"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-ext-700-normal-sk8_kpF-.woff2",
+      "PackagePath": "staticwebassets/assets/barlow-latin-ext-700-normal-sk8_kpF-.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-ext-800-normal-DHjhf6ta.woff",
+      "PackagePath": "staticwebassets/assets/barlow-latin-ext-800-normal-DHjhf6ta.woff"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-latin-ext-800-normal-uSolDMqV.woff2",
+      "PackagePath": "staticwebassets/assets/barlow-latin-ext-800-normal-uSolDMqV.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-vietnamese-400-normal-B8B3d_DU.woff2",
+      "PackagePath": "staticwebassets/assets/barlow-vietnamese-400-normal-B8B3d_DU.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-vietnamese-400-normal-Dcxa7Lg7.woff",
+      "PackagePath": "staticwebassets/assets/barlow-vietnamese-400-normal-Dcxa7Lg7.woff"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-vietnamese-500-normal-Ds--_AhX.woff2",
+      "PackagePath": "staticwebassets/assets/barlow-vietnamese-500-normal-Ds--_AhX.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-vietnamese-500-normal-OcIDFxwj.woff",
+      "PackagePath": "staticwebassets/assets/barlow-vietnamese-500-normal-OcIDFxwj.woff"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-vietnamese-600-normal--rM-LJkj.woff",
+      "PackagePath": "staticwebassets/assets/barlow-vietnamese-600-normal--rM-LJkj.woff"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-vietnamese-600-normal-gKnznvH6.woff2",
+      "PackagePath": "staticwebassets/assets/barlow-vietnamese-600-normal-gKnznvH6.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-vietnamese-700-normal-CtEmPuX0.woff",
+      "PackagePath": "staticwebassets/assets/barlow-vietnamese-700-normal-CtEmPuX0.woff"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-vietnamese-700-normal-DQ6dlXpV.woff2",
+      "PackagePath": "staticwebassets/assets/barlow-vietnamese-700-normal-DQ6dlXpV.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-vietnamese-800-normal-B95advN4.woff",
+      "PackagePath": "staticwebassets/assets/barlow-vietnamese-800-normal-B95advN4.woff"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/barlow-vietnamese-800-normal-DDiAQIYO.woff2",
+      "PackagePath": "staticwebassets/assets/barlow-vietnamese-800-normal-DDiAQIYO.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/config-global-Bo3zylOU.js",
+      "PackagePath": "staticwebassets/assets/config-global-Bo3zylOU.js"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/customers-CQ83gApw.js",
+      "PackagePath": "staticwebassets/assets/customers-CQ83gApw.js"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/dm-sans-latin-ext-wght-normal-D1bw2c55.woff2",
+      "PackagePath": "staticwebassets/assets/dm-sans-latin-ext-wght-normal-D1bw2c55.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/dm-sans-latin-wght-normal-DeBecvsH.woff2",
+      "PackagePath": "staticwebassets/assets/dm-sans-latin-wght-normal-DeBecvsH.woff2"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/format-time-Bb9gCqt_.js",
+      "PackagePath": "staticwebassets/assets/format-time-Bb9gCqt_.js"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/ic-profile.svg",
+      "PackagePath": "staticwebassets/assets/ic-profile.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/ic-user.png",
+      "PackagePath": "staticwebassets/assets/ic-user.png"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/glass/ic-glass-bag.svg",
+      "PackagePath": "staticwebassets/assets/icons/glass/ic-glass-bag.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/glass/ic-glass-buy.svg",
+      "PackagePath": "staticwebassets/assets/icons/glass/ic-glass-buy.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/glass/ic-glass-message.svg",
+      "PackagePath": "staticwebassets/assets/icons/glass/ic-glass-message.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/glass/ic-glass-users.svg",
+      "PackagePath": "staticwebassets/assets/icons/glass/ic-glass-users.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/navbar/ic-analytics.svg",
+      "PackagePath": "staticwebassets/assets/icons/navbar/ic-analytics.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/navbar/ic-blog.svg",
+      "PackagePath": "staticwebassets/assets/icons/navbar/ic-blog.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/navbar/ic-cart.svg",
+      "PackagePath": "staticwebassets/assets/icons/navbar/ic-cart.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/navbar/ic-disabled.svg",
+      "PackagePath": "staticwebassets/assets/icons/navbar/ic-disabled.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/navbar/ic-lock.svg",
+      "PackagePath": "staticwebassets/assets/icons/navbar/ic-lock.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/navbar/ic-user.svg",
+      "PackagePath": "staticwebassets/assets/icons/navbar/ic-user.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/notification/ic-notification-chat.svg",
+      "PackagePath": "staticwebassets/assets/icons/notification/ic-notification-chat.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/notification/ic-notification-mail.svg",
+      "PackagePath": "staticwebassets/assets/icons/notification/ic-notification-mail.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/notification/ic-notification-package.svg",
+      "PackagePath": "staticwebassets/assets/icons/notification/ic-notification-package.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/notification/ic-notification-shipping.svg",
+      "PackagePath": "staticwebassets/assets/icons/notification/ic-notification-shipping.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/shape-avatar.svg",
+      "PackagePath": "staticwebassets/assets/icons/shape-avatar.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/workspaces/logo-1.webp",
+      "PackagePath": "staticwebassets/assets/icons/workspaces/logo-1.webp"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/workspaces/logo-2.webp",
+      "PackagePath": "staticwebassets/assets/icons/workspaces/logo-2.webp"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/icons/workspaces/logo-3.webp",
+      "PackagePath": "staticwebassets/assets/icons/workspaces/logo-3.webp"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/illustrations/illustration-404.svg",
+      "PackagePath": "staticwebassets/assets/illustrations/illustration-404.svg"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/illustrations/illustration-dashboard.webp",
+      "PackagePath": "staticwebassets/assets/illustrations/illustration-dashboard.webp"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/index-BrEIW-kO.css",
+      "PackagePath": "staticwebassets/assets/index-BrEIW-kO.css"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/index-vRuK-cxK.js",
+      "PackagePath": "staticwebassets/assets/index-vRuK-cxK.js"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/logo.png",
+      "PackagePath": "staticwebassets/assets/logo.png"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/page-not-found-Bo0mw4KZ.js",
+      "PackagePath": "staticwebassets/assets/page-not-found-Bo0mw4KZ.js"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/profile-DriNB0Yt.js",
+      "PackagePath": "staticwebassets/assets/profile-DriNB0Yt.js"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/sign-in-CB4Gw_Zj.js",
+      "PackagePath": "staticwebassets/assets/sign-in-CB4Gw_Zj.js"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/sign-up-Lg0E3T7H.js",
+      "PackagePath": "staticwebassets/assets/sign-up-Lg0E3T7H.js"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/sign-up-view-BWp3nxFS.js",
+      "PackagePath": "staticwebassets/assets/sign-up-view-BWp3nxFS.js"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/users-Cdhw_5ji.js",
+      "PackagePath": "staticwebassets/assets/users-Cdhw_5ji.js"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/assets/yup-D5zPKNiZ.js",
+      "PackagePath": "staticwebassets/assets/yup-D5zPKNiZ.js"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.CabirCRM.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.CabirCRM.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.CabirCRM.API.props",
+      "PackagePath": "build\\CabirCRM.API.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.CabirCRM.API.props",
+      "PackagePath": "buildMultiTargeting\\CabirCRM.API.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.CabirCRM.API.props",
+      "PackagePath": "buildTransitive\\CabirCRM.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

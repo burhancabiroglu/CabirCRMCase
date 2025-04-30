@@ -1,0 +1,1 @@
+import{j as r}from"./index-vRuK-cxK.js";import{C as i}from"./config-global-Bo3zylOU.js";import{S as t}from"./sign-up-view-BWp3nxFS.js";import"./yup-D5zPKNiZ.js";import"./Snackbar-CdTEUbTl.js";function a(){return r.jsxs(r.Fragment,{children:[r.jsx("title",{children:`Sign in - ${i.appName}`}),r.jsx(t,{})]})}export{a as default};

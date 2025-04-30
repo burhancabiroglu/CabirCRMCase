@@ -21,6 +21,7 @@ import { DashboardContent } from 'src/layouts/dashboard';
 import { Iconify } from 'src/components/iconify';
 import { Scrollbar } from 'src/components/scrollbar';
 import { ConfirmDialog , CustomerDialog } from 'src/components/dialogs';
+import { CustomerFilterDialog } from 'src/components/dialogs/customer-filter-dialog';
 import { emptyRows, TableNoData, getComparator, TableEmptyRows } from 'src/components/table';
 
 import { applyFilter } from '../customer-filter';
@@ -34,6 +35,9 @@ export function CustomersView() {
   const table = useTable();
 
   const [filterName, setFilterName] = useState('');
+  const [filterRegion, setFilterRegion] = useState<string | null>(null);
+  const [filterDate, setFilterDate] = useState<Date | null>(null);
+  const [openFilterDialog, setOpenFilterDialog] = useState(false);
 
   const [openDialog, setOpenDialog] = useState(false);
   const [editingCustomer, setEditingCustomer] = useState<Customer | null>(null);
@@ -45,6 +49,10 @@ export function CustomersView() {
   const handleOpenNew = () => {
     setEditingCustomer(null);
     setOpenDialog(true);
+  };
+
+  const handleOpenFilter = () => {
+    setOpenFilterDialog(true);
   };
 
   const handleCloseDialog = useCallback(() => {
@@ -69,8 +77,13 @@ export function CustomersView() {
   };
 
   const paginationParams = useMemo(
-    () => ({ pageNumber: table.page, pageSize: table.rowsPerPage }),
-    [table.page, table.rowsPerPage]
+    () => ({
+      pageNumber: table.page,
+      pageSize: table.rowsPerPage,
+      region: filterRegion,
+      registrationDate: filterDate?.toISOString() ?? null,
+    }),
+    [table.page, table.rowsPerPage, filterRegion, filterDate]
   );
 
   const { data: customers, fetchCustomers, deleteCustomer } = useCustomers(paginationParams);
@@ -82,6 +95,13 @@ export function CustomersView() {
   });
 
   const notFound = !dataFiltered.length && !!filterName;
+
+  const hasActiveFilter = filterRegion !== null || filterDate !== null;
+
+  const handleClearFilters = () => {
+    setFilterRegion(null);
+    setFilterDate(null);
+  };
 
   return (
     <DashboardContent>
@@ -114,6 +134,9 @@ export function CustomersView() {
             table.onResetPage();
           }}
           onDelete={handleDeleteSelectedRows}
+          onFilter={handleOpenFilter}
+          hasActiveFilter={hasActiveFilter}
+          onClearFilters={handleClearFilters}
         />
 
         <Scrollbar>
@@ -179,6 +202,16 @@ export function CustomersView() {
         onClose={handleCloseDialog}
         onSuccess={handleCloseDialog}
         customerToEdit={editingCustomer}
+      />
+
+      <CustomerFilterDialog
+        open={openFilterDialog}
+        onClose={() => setOpenFilterDialog(false)}
+        onApply={({ region, registrationDate }) => {
+          setFilterRegion(region);
+          setFilterDate(registrationDate);
+          setOpenFilterDialog(false);
+        }}
       />
 
       <ConfirmDialog

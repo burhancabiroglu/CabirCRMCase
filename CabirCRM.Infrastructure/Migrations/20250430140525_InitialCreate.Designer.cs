@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CabirCRM.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250429144822_InitialCreate")]
+    [Migration("20250430140525_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
