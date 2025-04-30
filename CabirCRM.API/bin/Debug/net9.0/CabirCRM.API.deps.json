@@ -9,6 +9,7 @@
       "CabirCRM.API/1.0.0": {
         "dependencies": {
           "BCrypt.Net": "0.1.0",
+          "CabirCRM.Client": "1.0.0",
           "CabirCRM.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "9.0.3",
           "Microsoft.EntityFrameworkCore.Design": "9.0.4",
@@ -809,6 +810,14 @@
           }
         }
       },
+      "CabirCRM.Client/1.0.0": {
+        "runtime": {
+          "CabirCRM.Client.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "CabirCRM.Domain/1.0.0": {
         "runtime": {
           "CabirCRM.Domain.dll": {
@@ -819,6 +828,7 @@
       },
       "CabirCRM.Infrastructure/1.0.0": {
         "dependencies": {
+          "BCrypt.Net": "0.1.0",
           "CabirCRM.Application": "1.0.0",
           "CabirCRM.Domain": "1.0.0",
           "FluentValidation.AspNetCore": "11.3.0",
@@ -1263,6 +1273,11 @@
       "hashPath": "system.threading.channels.7.0.0.nupkg.sha512"
     },
     "CabirCRM.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CabirCRM.Client/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

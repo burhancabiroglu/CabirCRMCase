@@ -2,6 +2,7 @@ using CabirCRM.Application.DTOs;
 using CabirCRM.Application.Interfaces;
 using CabirCRM.Application.Requests.Customers;
 using CabirCRM.Application.Responses.Customers;
+using CabirCRM.Application.Responses.Common;
 using CabirCRM.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -41,7 +42,9 @@ public class CustomersController(
         [FromQuery] string? lastName,
         [FromQuery] string? email,
         [FromQuery] DateTime? registrationDate,
-        [FromQuery] string? region)
+        [FromQuery] string? region,
+        [FromQuery] int pageNumber = 0,
+        [FromQuery] int pageSize = 25)
     {
         var customers = await customerRepository.GetAllAsync();
 
@@ -57,28 +60,41 @@ public class CustomersController(
             filteredCustomers = filteredCustomers.Where(c => c.Email.Contains(email, StringComparison.OrdinalIgnoreCase));
 
         if (registrationDate.HasValue)
-            filteredCustomers = filteredCustomers.Where(c => c.RegistrationDate.Date == registrationDate.Value.Date);
+            filteredCustomers = filteredCustomers.Where(c => c.RegistrationDate.Date < registrationDate.Value.Date);
 
         if (!string.IsNullOrWhiteSpace(region))
             filteredCustomers = filteredCustomers.Where(c => c.Region.Contains(region, StringComparison.OrdinalIgnoreCase));
 
-        var result = filteredCustomers.Select(c => new CustomerDto
+        var result = filteredCustomers
+            .Skip(pageNumber * pageSize)
+            .Take(pageSize)
+            .Select(c => new CustomerDto
+            {
+                Id = c.Id,
+                FirstName = c.FirstName,
+                LastName = c.LastName,
+                Email = c.Email,
+                Region = c.Region,
+                RegistrationDate = c.RegistrationDate
+            }).ToList();
+
+        var response = new PaginationResponse<CustomerDto>
         {
-            Id = c.Id,
-            FirstName = c.FirstName,
-            LastName = c.LastName,
-            Email = c.Email,
-            Region = c.Region,
-            RegistrationDate = c.RegistrationDate
-        }).ToList();
+            PageNumber = pageNumber,
+            PageSize = pageSize,
+            TotalCount = filteredCustomers.Count(),
+            Data = result
+        };
 
         logger.LogInformation(
-            "Retrieved customers list with optional filters. Context: {Context}, TotalCustomers: {CustomerCount}",
+            "Retrieved customers list with optional filters and pagination. Context: {Context}, PageNumber: {PageNumber}, PageSize: {PageSize}, RetrievedCustomers: {CustomerCount}",
             $"{nameof(CustomersController)}.{nameof(GetAll)}",
+            pageNumber,
+            pageSize,
             result.Count
         );
 
-        return Ok(result);
+        return Ok(response);
     }
 
     [Authorize(Policy = "AdminOnly")]

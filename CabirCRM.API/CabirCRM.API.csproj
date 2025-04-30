@@ -18,7 +18,12 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\CabirCRM.Client\CabirCRM.Client.csproj" />
       <ProjectReference Include="..\CabirCRM.Infrastructure\CabirCRM.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\" />
     </ItemGroup>
 
 </Project>

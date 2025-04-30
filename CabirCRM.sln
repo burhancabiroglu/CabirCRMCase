@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabirCRM.Domain", "CabirCRM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabirCRM.Application", "CabirCRM.Application\CabirCRM.Application.csproj", "{89896FCB-AACD-4CF7-8CA7-951EEF3039A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabirCRM.Client", "CabirCRM.Client\CabirCRM.Client.csproj", "{A1FDCA82-E925-46A2-B609-8E88831468BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,5 +36,9 @@ Global
 		{89896FCB-AACD-4CF7-8CA7-951EEF3039A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89896FCB-AACD-4CF7-8CA7-951EEF3039A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89896FCB-AACD-4CF7-8CA7-951EEF3039A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1FDCA82-E925-46A2-B609-8E88831468BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1FDCA82-E925-46A2-B609-8E88831468BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1FDCA82-E925-46A2-B609-8E88831468BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1FDCA82-E925-46A2-B609-8E88831468BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -10,5 +10,10 @@ public static class MigrationExtensions
         using var scope = app.Services.CreateScope();
         var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
         dbContext.Database.Migrate();
+        if (!dbContext.Customers.Any())
+        {
+            ApplicationDbContext.SeedManually(dbContext);
+        }
+        
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/CabirCRM.API.csproj": {}
+    "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/CabirCRM.API.csproj": {}
   },
   "projects": {
-    "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/CabirCRM.API.csproj": {
+    "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/CabirCRM.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/CabirCRM.API.csproj",
+        "projectUniqueName": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/CabirCRM.API.csproj",
         "projectName": "CabirCRM.API",
-        "projectPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/CabirCRM.API.csproj",
+        "projectPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/CabirCRM.API.csproj",
         "packagesPath": "/Users/burhancabiroglu/.nuget/packages/",
-        "outputPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.API/obj/",
+        "outputPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/burhancabiroglu/.nuget/NuGet/NuGet.Config"
@@ -27,8 +27,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Infrastructure/CabirCRM.Infrastructure.csproj": {
-                "projectPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Infrastructure/CabirCRM.Infrastructure.csproj"
+              "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/CabirCRM.Client.csproj": {
+                "projectPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/CabirCRM.Client.csproj"
+              },
+              "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Infrastructure/CabirCRM.Infrastructure.csproj": {
+                "projectPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Infrastructure/CabirCRM.Infrastructure.csproj"
               }
             }
           }
@@ -95,14 +98,14 @@
         }
       }
     },
-    "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Application/CabirCRM.Application.csproj": {
+    "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Application/CabirCRM.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Application/CabirCRM.Application.csproj",
+        "projectUniqueName": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Application/CabirCRM.Application.csproj",
         "projectName": "CabirCRM.Application",
-        "projectPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Application/CabirCRM.Application.csproj",
+        "projectPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Application/CabirCRM.Application.csproj",
         "packagesPath": "/Users/burhancabiroglu/.nuget/packages/",
-        "outputPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Application/obj/",
+        "outputPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/burhancabiroglu/.nuget/NuGet/NuGet.Config"
@@ -118,8 +121,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj": {
-                "projectPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj"
+              "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj": {
+                "projectPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj"
               }
             }
           }
@@ -165,14 +168,14 @@
         }
       }
     },
-    "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj": {
+    "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/CabirCRM.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj",
-        "projectName": "CabirCRM.Domain",
-        "projectPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj",
+        "projectUniqueName": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/CabirCRM.Client.csproj",
+        "projectName": "CabirCRM.Client",
+        "projectPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/CabirCRM.Client.csproj",
         "packagesPath": "/Users/burhancabiroglu/.nuget/packages/",
-        "outputPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/obj/",
+        "outputPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/burhancabiroglu/.nuget/NuGet/NuGet.Config"
@@ -225,14 +228,74 @@
         }
       }
     },
-    "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Infrastructure/CabirCRM.Infrastructure.csproj": {
+    "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Infrastructure/CabirCRM.Infrastructure.csproj",
-        "projectName": "CabirCRM.Infrastructure",
-        "projectPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Infrastructure/CabirCRM.Infrastructure.csproj",
+        "projectUniqueName": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj",
+        "projectName": "CabirCRM.Domain",
+        "projectPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj",
         "packagesPath": "/Users/burhancabiroglu/.nuget/packages/",
-        "outputPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Infrastructure/obj/",
+        "outputPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/burhancabiroglu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Infrastructure/CabirCRM.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Infrastructure/CabirCRM.Infrastructure.csproj",
+        "projectName": "CabirCRM.Infrastructure",
+        "projectPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Infrastructure/CabirCRM.Infrastructure.csproj",
+        "packagesPath": "/Users/burhancabiroglu/.nuget/packages/",
+        "outputPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/burhancabiroglu/.nuget/NuGet/NuGet.Config"
@@ -248,11 +311,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Application/CabirCRM.Application.csproj": {
-                "projectPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Application/CabirCRM.Application.csproj"
+              "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Application/CabirCRM.Application.csproj": {
+                "projectPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Application/CabirCRM.Application.csproj"
               },
-              "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj": {
-                "projectPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj"
+              "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj": {
+                "projectPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj"
               }
             }
           }
@@ -273,6 +336,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "BCrypt.Net": {
+              "target": "Package",
+              "version": "[0.1.0, )"
+            },
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.0, )"
