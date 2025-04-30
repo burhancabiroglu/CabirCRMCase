@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj",
+      "projectUniqueName": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj",
       "projectName": "CabirCRM.Domain",
-      "projectPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj",
+      "projectPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Domain/CabirCRM.Domain.csproj",
       "packagesPath": "/Users/burhancabiroglu/.nuget/packages/",
-      "outputPath": "/Users/burhancabiroglu/Documents/playgrounds/CabirCRM/CabirCRM.Domain/obj/",
+      "outputPath": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/burhancabiroglu/.nuget/NuGet/NuGet.Config"

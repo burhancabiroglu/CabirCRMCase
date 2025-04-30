@@ -1,0 +1,1 @@
+import{j as r}from"./index-vRuK-cxK.js";import{C as t}from"./config-global-Bo3zylOU.js";import{a as i}from"./sign-up-view-BWp3nxFS.js";import"./yup-D5zPKNiZ.js";import"./Snackbar-CdTEUbTl.js";function s(){return r.jsxs(r.Fragment,{children:[r.jsx("title",{children:`Sign up - ${t.appName}`}),r.jsx(i,{})]})}export{s as default};

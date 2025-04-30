@@ -2,6 +2,7 @@ using CabirCRM.Application.DTOs;
 using CabirCRM.Application.Interfaces;
 using CabirCRM.Application.Requests.Customers;
 using CabirCRM.Application.Responses.Customers;
+using CabirCRM.Application.Responses.Common;
 using CabirCRM.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -11,7 +12,10 @@ namespace CabirCRM.API.Controllers;
 [Route("api/[controller]")]
 [Authorize(Policy = "AdminOrStandard")]
 [ApiController]
-public class CustomersController(ICustomerRepository customerRepository) : ControllerBase
+public class CustomersController(
+    ICustomerRepository customerRepository,
+    ILogger<CustomersController> logger
+    ) : ControllerBase
 {
     [Authorize(Policy = "AdminOnly")]
     [HttpPost]
@@ -22,53 +26,25 @@ public class CustomersController(ICustomerRepository customerRepository) : Contr
 
         var response = new CreateCustomerResponse(customer.Id, $"{customer.FirstName} {customer.LastName}");
 
+        logger.LogInformation(
+            "Customer created successfully. Context: {Context}, CustomerId: {CustomerId}, Email: {Email}",
+            $"{nameof(CustomersController)}.{nameof(Create)}",
+            customer.Id,
+            customer.Email
+        );
+
         return CreatedAtAction(nameof(GetById), new { id = customer.Id }, response);
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAll()
-    {
-        var customers = await customerRepository.GetAllAsync();
-        var result = customers.Select(c => new CustomerDto
-        {
-            Id = c.Id,
-            FirstName = c.FirstName,
-            LastName = c.LastName,
-            Email = c.Email,
-            Region = c.Region,
-            RegistrationDate = c.RegistrationDate
-        });
-
-        return Ok(result);
-    }
-
-    [Authorize(Policy = "AdminOnly")]
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetById(Guid id)
-    {
-        var customer = await customerRepository.GetByIdAsync(id);
-        if (customer == null) return NotFound();
-
-        var result = new CustomerDto
-        {
-            Id = customer.Id,
-            FirstName = customer.FirstName,
-            LastName = customer.LastName,
-            Email = customer.Email,
-            Region = customer.Region,
-            RegistrationDate = customer.RegistrationDate
-        };
-
-        return Ok(result);
-    }
-    
-    [HttpGet("filter")]
-    public async Task<IActionResult> FilterCustomers(
+    public async Task<IActionResult> GetAll(
         [FromQuery] string? firstName,
         [FromQuery] string? lastName,
         [FromQuery] string? email,
         [FromQuery] DateTime? registrationDate,
-        [FromQuery] string? region)
+        [FromQuery] string? region,
+        [FromQuery] int pageNumber = 0,
+        [FromQuery] int pageSize = 25)
     {
         var customers = await customerRepository.GetAllAsync();
 
@@ -84,20 +60,74 @@ public class CustomersController(ICustomerRepository customerRepository) : Contr
             filteredCustomers = filteredCustomers.Where(c => c.Email.Contains(email, StringComparison.OrdinalIgnoreCase));
 
         if (registrationDate.HasValue)
-            filteredCustomers = filteredCustomers.Where(c => c.RegistrationDate.Date == registrationDate.Value.Date);
+            filteredCustomers = filteredCustomers.Where(c => c.RegistrationDate.Date < registrationDate.Value.Date);
 
         if (!string.IsNullOrWhiteSpace(region))
             filteredCustomers = filteredCustomers.Where(c => c.Region.Contains(region, StringComparison.OrdinalIgnoreCase));
 
-        var result = filteredCustomers.Select(c => new CustomerDto
+        var result = filteredCustomers
+            .Skip(pageNumber * pageSize)
+            .Take(pageSize)
+            .Select(c => new CustomerDto
+            {
+                Id = c.Id,
+                FirstName = c.FirstName,
+                LastName = c.LastName,
+                Email = c.Email,
+                Region = c.Region,
+                RegistrationDate = c.RegistrationDate
+            }).ToList();
+
+        var response = new PaginationResponse<CustomerDto>
         {
-            Id = c.Id,
-            FirstName = c.FirstName,
-            LastName = c.LastName,
-            Email = c.Email,
-            Region = c.Region,
-            RegistrationDate = c.RegistrationDate
-        });
+            PageNumber = pageNumber,
+            PageSize = pageSize,
+            TotalCount = filteredCustomers.Count(),
+            Data = result
+        };
+
+        logger.LogInformation(
+            "Retrieved customers list with optional filters and pagination. Context: {Context}, PageNumber: {PageNumber}, PageSize: {PageSize}, RetrievedCustomers: {CustomerCount}",
+            $"{nameof(CustomersController)}.{nameof(GetAll)}",
+            pageNumber,
+            pageSize,
+            result.Count
+        );
+
+        return Ok(response);
+    }
+
+    [Authorize(Policy = "AdminOnly")]
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(Guid id)
+    {
+        var customer = await customerRepository.GetByIdAsync(id);
+        if (customer == null)
+        {
+            logger.LogWarning(
+                "Customer not found. Context: {Context}, CustomerId: {CustomerId}",
+                $"{nameof(CustomersController)}.{nameof(GetById)}",
+                id
+            );
+            return NotFound();
+        }
+
+        var result = new CustomerDto
+        {
+            Id = customer.Id,
+            FirstName = customer.FirstName,
+            LastName = customer.LastName,
+            Email = customer.Email,
+            Region = customer.Region,
+            RegistrationDate = customer.RegistrationDate
+        };
+
+        logger.LogInformation(
+            "Retrieved customer by ID. Context: {Context}, CustomerId: {CustomerId}, Email: {Email}",
+            $"{nameof(CustomersController)}.{nameof(GetById)}",
+            result.Id,
+            result.Email
+        );
 
         return Ok(result);
     }
@@ -109,9 +139,23 @@ public class CustomersController(ICustomerRepository customerRepository) : Contr
         var customer = await customerRepository.GetByIdAsync(id);
 
         if (customer == null)
+        {
+            logger.LogWarning(
+                "Delete failed. Context: {Context}, Reason: {Reason}, CustomerId: {CustomerId}",
+                $"{nameof(CustomersController)}.{nameof(Delete)}",
+                "Customer not found",
+                id
+            );
             return NotFound(new { message = "Customer not found." });
+        }
 
         await customerRepository.DeleteAsync(customer);
+
+        logger.LogInformation(
+            "Customer deleted successfully. Context: {Context}, CustomerId: {CustomerId}",
+            $"{nameof(CustomersController)}.{nameof(Delete)}",
+            customer.Id
+        );
 
         return NoContent();
     }
@@ -123,7 +167,15 @@ public class CustomersController(ICustomerRepository customerRepository) : Contr
         var customer = await customerRepository.GetByIdAsync(id);
 
         if (customer == null)
+        {
+            logger.LogWarning(
+                "Update failed. Context: {Context}, Reason: {Reason}, CustomerId: {CustomerId}",
+                $"{nameof(CustomersController)}.{nameof(Update)}",
+                "Customer not found",
+                id
+            );
             return NotFound(new { message = "Customer not found." });
+        }
         
         customer.Update(
             firstName: request.FirstName,
@@ -133,6 +185,12 @@ public class CustomersController(ICustomerRepository customerRepository) : Contr
         );
 
         await customerRepository.UpdateAsync(customer);
+
+        logger.LogInformation(
+            "Customer updated successfully. Context: {Context}, CustomerId: {CustomerId}",
+            $"{nameof(CustomersController)}.{nameof(Update)}",
+            customer.Id
+        );
 
         return NoContent();
     }

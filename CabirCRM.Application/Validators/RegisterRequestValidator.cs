@@ -11,7 +11,7 @@ public class RegisterRequestValidator : AbstractValidator<RegisterRequest>
         RuleFor(x => x.Username)
             .NotEmpty().WithMessage("Username is required");
         
-        RuleFor(x => x.Role)
+        RuleFor(x => x.Role.ToString())
             .NotEmpty().WithMessage("Role is required");
     }
 }

@@ -13,10 +13,17 @@
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.4" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\CabirCRM.Client\CabirCRM.Client.csproj" />
       <ProjectReference Include="..\CabirCRM.Infrastructure\CabirCRM.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\" />
     </ItemGroup>
 
 </Project>
