@@ -1,8 +1,15 @@
 import { useState, useEffect, useCallback } from 'react';
 
 import { CustomerClient } from '../clients';
+import {
+  EmptyPaginationCustomer,
+} from '../models';
 
-import type { Customer, PaginationParams, CustomerUpdateRequest } from '../models';
+import type {
+  Customer,
+  Pagination,
+  PaginationParams,
+  CustomerUpdateRequest} from '../models';
 
 // ----------------------------------------------------------------------
 
@@ -11,7 +18,7 @@ const customerClient = new CustomerClient();
 // ----------------------------------------------------------------------
 
 export function useCustomers(params?: PaginationParams) {
-  const [data, setData] = useState<Customer[]>([]);
+  const [data, setData] = useState<Pagination<Customer[]>>(EmptyPaginationCustomer);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 

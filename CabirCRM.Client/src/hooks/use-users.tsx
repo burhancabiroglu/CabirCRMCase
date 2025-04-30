@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 
 import { UserClient } from '../clients';
+import { EmptyPaginationUser } from '../models';
 
-import type { User, PaginationParams } from '../models';
+import type { User, Pagination, PaginationParams} from '../models';
 
 // ----------------------------------------------------------------------
 
@@ -11,7 +12,7 @@ const userClient = new UserClient();
 // ----------------------------------------------------------------------
 
 export function useUsers(params?: PaginationParams) {
-  const [data, setData] = useState<User[]>([]);
+  const [data, setData] = useState<Pagination<User[]>>(EmptyPaginationUser);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 

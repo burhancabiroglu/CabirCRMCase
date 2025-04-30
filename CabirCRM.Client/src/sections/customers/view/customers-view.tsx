@@ -72,17 +72,15 @@ export function CustomersView() {
     [table.page, table.rowsPerPage]
   );
 
-  const { data: customers = [], fetchCustomers, deleteCustomer } = useCustomers(paginationParams);
+  const { data: customers, fetchCustomers, deleteCustomer } = useCustomers(paginationParams);
 
   const dataFiltered: Customer[] = applyFilter({
-    inputData: customers,
+    inputData: customers.data,
     comparator: getComparator(table.order, table.orderBy),
     filterName,
   });
 
   const notFound = !dataFiltered.length && !!filterName;
-
-  console.log(table.rowsPerPage);
 
   return (
     <DashboardContent>
@@ -123,13 +121,13 @@ export function CustomersView() {
               <CustomerTableHead
                 order={table.order}
                 orderBy={table.orderBy}
-                rowCount={customers.length}
+                rowCount={customers.data.length}
                 numSelected={table.selected.length}
                 onSort={table.onSort}
                 onSelectAllRows={(checked) =>
                   table.onSelectAllRows(
                     checked,
-                    customers.map((user) => user.id)
+                    customers.data.map((user) => user.id)
                   )
                 }
                 headLabel={[
@@ -142,10 +140,6 @@ export function CustomersView() {
               />
               <TableBody>
                 {dataFiltered
-                  .slice(
-                    table.page * table.rowsPerPage,
-                    table.page * table.rowsPerPage + table.rowsPerPage
-                  )
                   .map((row) => (
                     <CustomerTableRow
                       key={row.id}
@@ -159,7 +153,7 @@ export function CustomersView() {
 
                 <TableEmptyRows
                   height={68}
-                  emptyRows={emptyRows(table.page, table.rowsPerPage, customers.length)}
+                  emptyRows={emptyRows(table.page, table.rowsPerPage, customers.data.length)}
                 />
 
                 {notFound && <TableNoData searchQuery={filterName} />}
@@ -171,7 +165,7 @@ export function CustomersView() {
         <TablePagination
           component="div"
           page={table.page}
-          count={customers.length}
+          count={customers.totalCount}
           rowsPerPage={table.rowsPerPage}
           onPageChange={table.onChangePage}
           rowsPerPageOptions={[5, 10, 25]}

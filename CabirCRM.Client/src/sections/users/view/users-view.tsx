@@ -27,24 +27,30 @@ import { UserTableToolbar } from '../user-table-toolbar';
 
 export function UsersView() {
   const table = useTable();
-  console.log(table.page)
 
   const paginationParams = useMemo(
     () => ({ pageNumber: table.page, pageSize: table.rowsPerPage }),
     [table.page, table.rowsPerPage]
   );
 
-  const { data: users = [] } = useUsers(paginationParams);
+  const { data: users } = useUsers(paginationParams);
 
   const [filterName, setFilterName] = useState('');
 
   const dataFiltered: User[] = applyFilter({
-    inputData: users,
+    inputData: users.data,
     comparator: getComparator(table.order, table.orderBy),
     filterName,
   });
 
   const notFound = !dataFiltered.length && !!filterName;
+
+  console.log(users.data);
+
+  /*.slice(
+    table.page * table.rowsPerPage,
+    table.page * table.rowsPerPage + table.rowsPerPage
+  )* */
 
   return (
     <DashboardContent>
@@ -75,13 +81,13 @@ export function UsersView() {
               <UserTableHead
                 order={table.order}
                 orderBy={table.orderBy}
-                rowCount={users.length}
+                rowCount={users.data.length}
                 numSelected={table.selected.length}
                 onSort={table.onSort}
                 onSelectAllRows={(checked) =>
                   table.onSelectAllRows(
                     checked,
-                    users.map((user) => user.id)
+                    users.data.map((user) => user.id)
                   )
                 }
                 headLabel={[
@@ -94,10 +100,6 @@ export function UsersView() {
               />
               <TableBody>
                 {dataFiltered
-                  .slice(
-                    table.page * table.rowsPerPage,
-                    table.page * table.rowsPerPage + table.rowsPerPage
-                  )
                   .map((row) => (
                     <UserTableRow
                       key={row.id}
@@ -109,7 +111,7 @@ export function UsersView() {
 
                 <TableEmptyRows
                   height={68}
-                  emptyRows={emptyRows(table.page, table.rowsPerPage, users.length)}
+                  emptyRows={emptyRows(table.page, table.rowsPerPage, users.data.length)}
                 />
 
                 {notFound && <TableNoData searchQuery={filterName} />}
@@ -121,7 +123,7 @@ export function UsersView() {
         <TablePagination
           component="div"
           page={table.page}
-          count={users.length}
+          count={users.totalCount}
           rowsPerPage={table.rowsPerPage}
           onPageChange={table.onChangePage}
           rowsPerPageOptions={[5, 10, 25]}
