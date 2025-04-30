@@ -15,6 +15,7 @@ import { GuestRoute } from '../components/route/guest-route';
 
 // ----------------------------------------------------------------------
 
+export const ProfilePage = lazy(() => import('src/pages/profile'));
 export const UsersPage = lazy(() => import('src/pages/users'));
 export const CustomersPage = lazy(() => import('src/pages/customers'));
 export const SignInPage = lazy(() => import('src/pages/sign-in'));
@@ -54,7 +55,8 @@ export const routesSection: RouteObject[] = [
     ),
     children: [
       { index: true, element: <UsersPage /> },
-      { path: 'customers', element: <CustomersPage /> }
+      { path: 'customers', element: <CustomersPage /> },
+      { path: 'profile', element: <ProfilePage /> }
     ],
   },
   {

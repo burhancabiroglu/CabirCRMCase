@@ -1,3 +1,4 @@
+import type { Role } from './role';
 import type { User } from './user';
 
 export type LoginRequest = {
@@ -8,15 +9,14 @@ export type LoginRequest = {
 export type RegisterRequest = {
   username: string;
   email: string;
-  role: 'Admin' | 'Standard';
+  role: Role;
   password: string;
 }
 
 export type UpdateUserRequest  = {
-  id: string;
   username?: string;
   email?: string;
-  password?: string;
+  role?: Role;
 }
 
 export type AuthResponse = {

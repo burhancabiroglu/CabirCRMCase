@@ -18,7 +18,6 @@ import { useAuth } from 'src/hooks';
 
 // ----------------------------------------------------------------------
 
-
 export type AccountPopoverProps = IconButtonProps & {
   data?: {
     label: string;
@@ -29,7 +28,7 @@ export type AccountPopoverProps = IconButtonProps & {
 };
 
 export function AccountPopover({ data = [], sx, ...other }: AccountPopoverProps) {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
   const router = useRouter();
 
   const pathname = usePathname();
@@ -57,7 +56,7 @@ export function AccountPopover({ data = [], sx, ...other }: AccountPopoverProps)
       <IconButton
         onClick={handleOpenPopover}
         sx={{
-          p: '2px',
+          p: '1px',
           width: 46,
           height: 46,
           background: (theme) =>
@@ -66,7 +65,7 @@ export function AccountPopover({ data = [], sx, ...other }: AccountPopoverProps)
         }}
         {...other}
       >
-        <Avatar src="/assets/ic-user.png" alt={user?.username} sx={{ width: 1, height: 1 }}>
+        <Avatar alt={user?.username} sx={{ width: 1, height: 1 }}>
           {user?.username.charAt(0).toUpperCase()}
         </Avatar>
       </IconButton>
@@ -131,7 +130,16 @@ export function AccountPopover({ data = [], sx, ...other }: AccountPopoverProps)
         <Divider sx={{ borderStyle: 'dashed' }} />
 
         <Box sx={{ p: 1 }}>
-          <Button fullWidth color="error" size="medium" variant="text">
+          <Button
+            fullWidth
+            color="error"
+            size="medium"
+            variant="text"
+            onClick={() => {
+              logout();
+              router.push('/login');
+            }}
+          >
             Logout
           </Button>
         </Box>

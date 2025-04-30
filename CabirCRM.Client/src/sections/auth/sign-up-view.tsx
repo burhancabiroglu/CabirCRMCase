@@ -54,7 +54,6 @@ export function SignUpView() {
           router.push('/sign-in');
         }, 1500);
       } catch (err: any) {
-        console.log(data);
         const message = err?.response?.data?.message || 'Registration failed';
         setError(message);
       } finally {

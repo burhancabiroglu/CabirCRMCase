@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CabirCRM.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d497924ddd22e0ab6f9cb093dfc2650ace9835ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27288ad106b15a6f6cf69c21264522dadc391204")]
 [assembly: System.Reflection.AssemblyProductAttribute("CabirCRM.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CabirCRM.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -272,22 +272,11 @@ public class UsersController(
             return Unauthorized(new { message = "Invalid token: Role missing." });
         }
 
-        if (currentUserRole != "Admin")
-        {
-            user.Update(
-                request.Username,
-                BCrypt.Net.BCrypt.HashPassword(request.Password),
-                user.Role
-            );
-        }
-        else
-        {
-            user.Update(
-                request.Username,
-                BCrypt.Net.BCrypt.HashPassword(request.Password),
-                request.Role
-            );
-        }
+        user.Update(
+            request.Username,
+            user.PasswordHash,
+            request.Role
+        );
 
         await userRepository.UpdateAsync(user);
 

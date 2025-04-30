@@ -1,6 +1,6 @@
-import axios from '../api/axios';
+import type { User, AuthResponse, LoginRequest, RegisterRequest, UpdateUserRequest } from 'src/models';
 
-import type { AuthResponse, LoginRequest, RegisterRequest } from '../models';
+import axios from 'src/api/axios';
 
 // ----------------------------------------------------------------------
 
@@ -22,6 +22,11 @@ export class AuthClient {
     const response = await axios.post<AuthResponse>('/users/refresh-token', {
       refreshToken,
     });
+    return response.data;
+  }
+
+  async updateProfile(id: string, data: UpdateUserRequest): Promise<User> {
+    const response = await axios.put<User>(`/users/${id}`, data);
     return response.data;
   }
 }

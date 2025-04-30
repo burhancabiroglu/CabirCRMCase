@@ -45,13 +45,6 @@ export function UsersView() {
 
   const notFound = !dataFiltered.length && !!filterName;
 
-  console.log(users.data);
-
-  /*.slice(
-    table.page * table.rowsPerPage,
-    table.page * table.rowsPerPage + table.rowsPerPage
-  )* */
-
   return (
     <DashboardContent>
       <Box
