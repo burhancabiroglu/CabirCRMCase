@@ -18,6 +18,8 @@ builder.Services
     .AddCorsPolicy(builder.Configuration)
     .AddRouting(options => { options.LowercaseUrls = true; });
 
+builder.WebHost.UseUrls("http://0.0.0.0:5001");
+
 var app = builder.Build();
 var logger = app.Services.GetRequiredService<ILogger<Program>>();
 

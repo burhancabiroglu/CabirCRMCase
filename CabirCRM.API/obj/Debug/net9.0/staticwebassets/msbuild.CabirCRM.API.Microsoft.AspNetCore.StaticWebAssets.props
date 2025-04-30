@@ -594,23 +594,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\config-global-Bo3zylOU.js'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\customers-CQ83gApw.js'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\customers-DgTFkUDc.js'))">
       <SourceType>Package</SourceType>
       <SourceId>CabirCRM.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CabirCRM.API</BasePath>
-      <RelativePath>assets/customers-CQ83gApw.js</RelativePath>
+      <RelativePath>assets/customers-DgTFkUDc.js</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gc63a5e6kx</Fingerprint>
-      <Integrity>4CB4pbXK5vd5GHmu/q+of27vPT9zuZRrZMoIwqIJRPM=</Integrity>
+      <Fingerprint>ofv3c3mbdc</Fingerprint>
+      <Integrity>5FkriXVdmNNDuRpzAH+NScA4ojoEDgmzRODb5Ded1Xc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\customers-CQ83gApw.js'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\customers-DgTFkUDc.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\dm-sans-latin-ext-wght-normal-D1bw2c55.woff2'))">
       <SourceType>Package</SourceType>
@@ -648,23 +648,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\dm-sans-latin-wght-normal-DeBecvsH.woff2'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\format-time-Bb9gCqt_.js'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\format-time-DvtvNft6.js'))">
       <SourceType>Package</SourceType>
       <SourceId>CabirCRM.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CabirCRM.API</BasePath>
-      <RelativePath>assets/format-time-Bb9gCqt_.js</RelativePath>
+      <RelativePath>assets/format-time-DvtvNft6.js</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>2mub3p9s02</Fingerprint>
-      <Integrity>uuY9ewPPjZVRBO7e7gFNmE1nXVoXlaHVkjpqpC7HHgA=</Integrity>
+      <Fingerprint>mw2tqsfru9</Fingerprint>
+      <Integrity>9q2dn+z3zNt8rV0uThF+zJEEjtrg+dC6DIV6weYu5lc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\format-time-Bb9gCqt_.js'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\format-time-DvtvNft6.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\ic-profile.svg'))">
       <SourceType>Package</SourceType>
@@ -1062,6 +1062,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\illustrations\illustration-dashboard.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\index-BKKnXwpn.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>CabirCRM.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CabirCRM.API</BasePath>
+      <RelativePath>assets/index-BKKnXwpn.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>jjx0kgw2zw</Fingerprint>
+      <Integrity>MQLjbB6SfAiw7YLXsb047ogoPWx6dnnCZtITNJAxEA4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\index-BKKnXwpn.js'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\index-BrEIW-kO.css'))">
       <SourceType>Package</SourceType>
       <SourceId>CabirCRM.API</SourceId>
@@ -1079,24 +1097,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\index-BrEIW-kO.css'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\index-vRuK-cxK.js'))">
-      <SourceType>Package</SourceType>
-      <SourceId>CabirCRM.API</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/CabirCRM.API</BasePath>
-      <RelativePath>assets/index-vRuK-cxK.js</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>f78mskfzup</Fingerprint>
-      <Integrity>C++oiirR+cplvwPB6RDNSMs/iq5eqoiAIkn9zcuWn/w=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\index-vRuK-cxK.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\logo.png'))">
       <SourceType>Package</SourceType>
@@ -1116,167 +1116,167 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\logo.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\page-not-found-Bo0mw4KZ.js'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\page-not-found-DeUkBpA2.js'))">
       <SourceType>Package</SourceType>
       <SourceId>CabirCRM.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CabirCRM.API</BasePath>
-      <RelativePath>assets/page-not-found-Bo0mw4KZ.js</RelativePath>
+      <RelativePath>assets/page-not-found-DeUkBpA2.js</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>rxdelrzir2</Fingerprint>
-      <Integrity>8ZDpBGgFL17jzluID0ivs5T4Y/r7GiB/K3E7GMsYtJQ=</Integrity>
+      <Fingerprint>jy96ou3hp0</Fingerprint>
+      <Integrity>6zdzsNzNJLpO8CmHr7bBhXKHEklk9a477qO9pHBBNJo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\page-not-found-Bo0mw4KZ.js'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\page-not-found-DeUkBpA2.js'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\profile-DriNB0Yt.js'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\profile-BdJnhTS6.js'))">
       <SourceType>Package</SourceType>
       <SourceId>CabirCRM.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CabirCRM.API</BasePath>
-      <RelativePath>assets/profile-DriNB0Yt.js</RelativePath>
+      <RelativePath>assets/profile-BdJnhTS6.js</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>b8qgd7pprw</Fingerprint>
-      <Integrity>y2FrOaYLsFooWdakrZhcky9C2KmyfYQSFuZ1Lj9DwJ4=</Integrity>
+      <Fingerprint>3gnfyshqcg</Fingerprint>
+      <Integrity>jfm0y0nXFtzPYfeZ6SYEtvX5ehbe8l42mC/9W3VEq4Y=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\profile-DriNB0Yt.js'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\profile-BdJnhTS6.js'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\sign-in-CB4Gw_Zj.js'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\sign-in-BFMzz9lj.js'))">
       <SourceType>Package</SourceType>
       <SourceId>CabirCRM.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CabirCRM.API</BasePath>
-      <RelativePath>assets/sign-in-CB4Gw_Zj.js</RelativePath>
+      <RelativePath>assets/sign-in-BFMzz9lj.js</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>erdhlkfike</Fingerprint>
-      <Integrity>FivW18Mh/9Wcpa3b7hC0h5R+yVMrMzeD7YttigeW/sU=</Integrity>
+      <Fingerprint>ulcobp0590</Fingerprint>
+      <Integrity>0oR1CTvq7VgGwKsfSA9UquV8HK3WI1bUvv9Px1ttPP0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\sign-in-CB4Gw_Zj.js'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\sign-in-BFMzz9lj.js'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\sign-up-Lg0E3T7H.js'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\sign-up-DoqawY0O.js'))">
       <SourceType>Package</SourceType>
       <SourceId>CabirCRM.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CabirCRM.API</BasePath>
-      <RelativePath>assets/sign-up-Lg0E3T7H.js</RelativePath>
+      <RelativePath>assets/sign-up-DoqawY0O.js</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>r007kbb0m8</Fingerprint>
-      <Integrity>JbS5gjTvtImjT7KjF05U7Y71IR0Q04ramZMECZV2+kE=</Integrity>
+      <Fingerprint>jzev9dcemd</Fingerprint>
+      <Integrity>n5r9tjtHe3MT9CWnIWzV4vhC77mdz4/w3+OTBae6tIo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\sign-up-Lg0E3T7H.js'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\sign-up-DoqawY0O.js'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\sign-up-view-BWp3nxFS.js'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\sign-up-view-CDTzgoVP.js'))">
       <SourceType>Package</SourceType>
       <SourceId>CabirCRM.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CabirCRM.API</BasePath>
-      <RelativePath>assets/sign-up-view-BWp3nxFS.js</RelativePath>
+      <RelativePath>assets/sign-up-view-CDTzgoVP.js</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7w6p6l7z6a</Fingerprint>
-      <Integrity>2aaqE4Xp9a/HX2W83Ul9DQUIJrnl2rIvAJ7tMBgVXNs=</Integrity>
+      <Fingerprint>qsgj3l66fi</Fingerprint>
+      <Integrity>yhJh/Q6d2iYr3icGuIwfJ8kWB11U4SBRuZblMJ7PLQc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\sign-up-view-BWp3nxFS.js'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\sign-up-view-CDTzgoVP.js'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\Snackbar-CdTEUbTl.js'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\Snackbar-B0LcX2n5.js'))">
       <SourceType>Package</SourceType>
       <SourceId>CabirCRM.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CabirCRM.API</BasePath>
-      <RelativePath>assets/Snackbar-CdTEUbTl.js</RelativePath>
+      <RelativePath>assets/Snackbar-B0LcX2n5.js</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9x24fl9gu1</Fingerprint>
-      <Integrity>zVqQYBrLQrtg6JHaY0fIbsq/GMlAk9mq0zcJRpAmKe0=</Integrity>
+      <Fingerprint>122hs9ztnw</Fingerprint>
+      <Integrity>qfTMQrghG/9njq5oPUOuT8Z5XNinBq6m4w1x9JsScBo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\Snackbar-CdTEUbTl.js'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\Snackbar-B0LcX2n5.js'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\Stack-Bdb-YNvs.js'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\Stack-DmmxwAdY.js'))">
       <SourceType>Package</SourceType>
       <SourceId>CabirCRM.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CabirCRM.API</BasePath>
-      <RelativePath>assets/Stack-Bdb-YNvs.js</RelativePath>
+      <RelativePath>assets/Stack-DmmxwAdY.js</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>81qd7uedbr</Fingerprint>
-      <Integrity>9HvADEZxlajjSD3LxAPYLFg3DmeLGEBzsyLp470PwvA=</Integrity>
+      <Fingerprint>qfhndt9sio</Fingerprint>
+      <Integrity>Bgmbe2+k21l96kF67gyIKxU+k7nHkaf0jEb5P1edGtg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\Stack-Bdb-YNvs.js'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\Stack-DmmxwAdY.js'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\users-Cdhw_5ji.js'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\users-FCPypXKG.js'))">
       <SourceType>Package</SourceType>
       <SourceId>CabirCRM.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CabirCRM.API</BasePath>
-      <RelativePath>assets/users-Cdhw_5ji.js</RelativePath>
+      <RelativePath>assets/users-FCPypXKG.js</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>l5lw93h6f7</Fingerprint>
-      <Integrity>GVhOrE4+B2dHhaJVcvfI6cWX6mLmvIUyHSvKVVGmTKs=</Integrity>
+      <Fingerprint>szh4hs80wz</Fingerprint>
+      <Integrity>6KraUIoM2a31CRedASyvrm24xqUvg95Rtq31TxXmSGw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\users-Cdhw_5ji.js'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\users-FCPypXKG.js'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\yup-D5zPKNiZ.js'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\yup-B9_eU4uS.js'))">
       <SourceType>Package</SourceType>
       <SourceId>CabirCRM.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CabirCRM.API</BasePath>
-      <RelativePath>assets/yup-D5zPKNiZ.js</RelativePath>
+      <RelativePath>assets/yup-B9_eU4uS.js</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>brmi6442kl</Fingerprint>
-      <Integrity>t1mipRgfm/YYtw6fKqQWIhkMRtxXub/jqT7qOKGK4PE=</Integrity>
+      <Fingerprint>qrsku0pwlo</Fingerprint>
+      <Integrity>WsMKgVqWdZf56GuF81GPn22hQV8ny/gEDPQn7zGXdc8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\yup-D5zPKNiZ.js'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\yup-B9_eU4uS.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))">
       <SourceType>Package</SourceType>
@@ -1308,8 +1308,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6n7ai9zqj3</Fingerprint>
-      <Integrity>MgsV6Jo4g/EQrOkah2l3Tn/gl6iYcCgGx7l7hOswWYI=</Integrity>
+      <Fingerprint>3nb5ofx4gl</Fingerprint>
+      <Integrity>L45ImIIY/lcB6cVX0NE+zlibCGiJ13yrD7mm2SmttPM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</OriginalItemSpec>

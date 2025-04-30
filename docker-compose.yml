@@ -16,6 +16,22 @@ services:
     networks:
       - cabircrm_network
 
+  api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: cabircrm_api
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=CRM_DB;Username=postgres;Password=Password123;
+    ports:
+      - "5001:5001"
+    depends_on:
+      - postgres
+    networks:
+      - cabircrm_network
+
 volumes:
   cabircrm_postgres_data:
 

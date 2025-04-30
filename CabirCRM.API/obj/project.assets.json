@@ -1253,7 +1253,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "BCrypt.Net": "0.1.0",
           "CabirCRM.Application": "1.0.0",
           "CabirCRM.Domain": "1.0.0",
           "FluentValidation.AspNetCore": "11.3.0",
