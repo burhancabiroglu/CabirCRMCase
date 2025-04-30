@@ -5,25 +5,87 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b8b9474-d084-4cf6-9108-1e49ed45f930" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/Controllers/CustomersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/Controllers/CustomersController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.API.staticwebassets.endpoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.API.staticwebassets.endpoints.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.API.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.API.staticwebassets.runtime.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Client.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Client.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Client.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Infrastructure.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/CabirCRM.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/CabirCRM.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/CabirCRM.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/CabirCRM.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/CabirCRM.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/CabirCRM.API.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/CabirCRM.API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/CabirCRM.API.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/CabirCRM.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/CabirCRM.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/CabirCRM.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/CabirCRM.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/CabirCRM.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/CabirCRM.API.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/compressed/3t2yv5sh90-rxdelrzir2.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/compressed/6bxw657cos-2mub3p9s02.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/compressed/6dtp1zw86b-9x24fl9gu1.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/compressed/75nsetg02b-6n7ai9zqj3.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/compressed/9vz3gzb91p-erdhlkfike.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/compressed/btpbalknms-81qd7uedbr.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/compressed/c4quwgcf1o-l5lw93h6f7.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/compressed/cfhrg9mwl4-gc63a5e6kx.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/compressed/lijojeiihi-f78mskfzup.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/compressed/oddz1xfm60-r007kbb0m8.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/compressed/q86dfmrcp4-7w6p6l7z6a.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/compressed/rbt79pw0js-brmi6442kl.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/compressed/xk2107ya5o-b8qgd7pprw.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/ref/CabirCRM.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/ref/CabirCRM.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/refint/CabirCRM.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/refint/CabirCRM.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/staticwebassets.build.endpoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/staticwebassets.build.endpoints.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/staticwebassets.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/staticwebassets.pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/staticwebassets/msbuild.CabirCRM.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/staticwebassets/msbuild.CabirCRM.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/staticwebassets/msbuild.CabirCRM.API.Microsoft.AspNetCore.StaticWebAssets.props" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/obj/Debug/net9.0/staticwebassets/msbuild.CabirCRM.API.Microsoft.AspNetCore.StaticWebAssets.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/wwwroot/assets/Snackbar-CdTEUbTl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/wwwroot/assets/Stack-Bdb-YNvs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/wwwroot/assets/customers-CQ83gApw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/wwwroot/assets/format-time-Bb9gCqt_.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/wwwroot/assets/index-vRuK-cxK.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/wwwroot/assets/page-not-found-Bo0mw4KZ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/wwwroot/assets/profile-DriNB0Yt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/wwwroot/assets/sign-in-CB4Gw_Zj.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/wwwroot/assets/sign-up-Lg0E3T7H.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/wwwroot/assets/sign-up-view-BWp3nxFS.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/wwwroot/assets/users-Cdhw_5ji.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/wwwroot/assets/yup-D5zPKNiZ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/wwwroot/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/wwwroot/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.Application/obj/Debug/net9.0/CabirCRM.Application.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Application/obj/Debug/net9.0/CabirCRM.Application.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.Application/obj/Debug/net9.0/CabirCRM.Application.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Application/obj/Debug/net9.0/CabirCRM.Application.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.Application/obj/Debug/net9.0/CabirCRM.Application.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Application/obj/Debug/net9.0/CabirCRM.Application.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.Application/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Application/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.Application/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Application/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dialogs/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sections/customers/customer-table-toolbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/customers/customer-table-toolbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sections/customers/view/customers-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/customers/view/customers-view.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sections/users/user-table-toolbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/users/user-table-toolbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/CabirCRM.Client.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/CabirCRM.Client.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/CabirCRM.Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/CabirCRM.Client.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/CabirCRM.Client.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/CabirCRM.Client.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/CabirCRM.Client.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/CabirCRM.Client.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/CabirCRM.Client.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/CabirCRM.Client.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/CabirCRM.Client.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/CabirCRM.Client.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/CabirCRM.Client.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/CabirCRM.Client.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ref/CabirCRM.Client.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ref/CabirCRM.Client.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/refint/CabirCRM.Client.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/refint/CabirCRM.Client.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.Domain/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Domain/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Domain/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.Infrastructure/obj/Debug/net9.0/CabirCRM.Infrastructure.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Infrastructure/obj/Debug/net9.0/CabirCRM.Infrastructure.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.Infrastructure/obj/Debug/net9.0/CabirCRM.Infrastructure.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Infrastructure/obj/Debug/net9.0/CabirCRM.Infrastructure.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.Infrastructure/obj/Debug/net9.0/CabirCRM.Infrastructure.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Infrastructure/obj/Debug/net9.0/CabirCRM.Infrastructure.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.Infrastructure/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Infrastructure/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CabirCRM.Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,26 +111,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/frontend&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/src/models&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/src/models",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "npm.start.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/node_modules/prettier",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "ts.external.directory.path": "/Users/burhancabiroglu/Documents/projects/CabirCRM/CabirCRM.Client/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/models" />
