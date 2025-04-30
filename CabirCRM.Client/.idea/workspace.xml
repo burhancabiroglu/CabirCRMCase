@@ -5,35 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b8b9474-d084-4cf6-9108-1e49ed45f930" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.API/bin/Debug/net9.0/CabirCRM.Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CabirCRM.Application/bin/Debug/net9.0/CabirCRM.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Application/bin/Debug/net9.0/CabirCRM.Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CabirCRM.Application/bin/Debug/net9.0/CabirCRM.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Application/bin/Debug/net9.0/CabirCRM.Domain.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/CabirCRM.Client.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/CabirCRM.Client.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/CabirCRM.Client.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/CabirCRM.Client.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/clients/auth-client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/clients/auth-client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/auth-context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/auth-context.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/components/account-popover.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/account-popover.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/dashboard/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/dashboard/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/nav-config-account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/nav-config-account.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/sections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/sections.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sections/auth/sign-up-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/auth/sign-up-view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/use-users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/use-users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sections/users/user-table-row.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/users/user-table-row.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sections/users/view/users-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/users/view/users-view.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CabirCRM.Domain/bin/Debug/net9.0/CabirCRM.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Domain/bin/Debug/net9.0/CabirCRM.Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CabirCRM.Domain/bin/Debug/net9.0/CabirCRM.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Domain/bin/Debug/net9.0/CabirCRM.Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/CabirCRM.Domain.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/ref/CabirCRM.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/ref/CabirCRM.Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/refint/CabirCRM.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Domain/obj/Debug/net9.0/refint/CabirCRM.Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CabirCRM.Infrastructure/bin/Debug/net9.0/CabirCRM.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Infrastructure/bin/Debug/net9.0/CabirCRM.Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CabirCRM.Infrastructure/bin/Debug/net9.0/CabirCRM.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CabirCRM.Infrastructure/bin/Debug/net9.0/CabirCRM.Domain.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +108,7 @@
       <workItem from="1745845542076" duration="4622000" />
       <workItem from="1745881770697" duration="31007000" />
       <workItem from="1745970871590" duration="3090000" />
-      <workItem from="1746011047692" duration="5732000" />
+      <workItem from="1746011047692" duration="6430000" />
     </task>
     <servers />
   </component>

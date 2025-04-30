@@ -15,22 +15,29 @@ export function useUsers(params?: PaginationParams) {
   const [data, setData] = useState<Pagination<User[]>>(EmptyPaginationUser);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [deleteSuccess, setDeleteSuccess] = useState(false);
+
+  const fetchUsers = async () => {
+    try {
+      setLoading(true);
+      const result = await userClient.getAll(params);
+      setData(result);
+    } catch (err: any) {
+      setError(err.message || 'Failed to fetch users');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        setLoading(true);
-        const result = await userClient.getAll(params);
-        setData(result);
-      } catch (err: any) {
-        setError(err.message || 'Failed to fetch users');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchUsers().then(r => {});
+    fetchUsers().then(() => {});
   }, [params]);
 
-  return { data, loading, error };
+  const deleteUser = async (id: string) => {
+    await userClient.delete(id);
+    await fetchUsers();
+    setDeleteSuccess(true);
+  };
+
+  return { data, loading, error, fetchUsers, deleteUser, deleteSuccess, setDeleteSuccess };
 }

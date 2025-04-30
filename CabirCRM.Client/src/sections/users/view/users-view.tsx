@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
+import { Alert, Snackbar } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import TableContainer from '@mui/material/TableContainer';
 import TablePagination from '@mui/material/TablePagination';
@@ -16,6 +17,7 @@ import { useTable } from 'src/hooks';
 import { DashboardContent } from 'src/layouts/dashboard';
 
 import { Scrollbar } from 'src/components/scrollbar';
+import { ConfirmDialog } from 'src/components/dialogs';
 import { emptyRows , TableNoData , getComparator, TableEmptyRows } from 'src/components/table';
 
 import {  applyFilter } from '../user-filter';
@@ -33,9 +35,10 @@ export function UsersView() {
     [table.page, table.rowsPerPage]
   );
 
-  const { data: users } = useUsers(paginationParams);
+  const { data: users, deleteUser, fetchUsers, deleteSuccess, setDeleteSuccess } = useUsers(paginationParams);
 
   const [filterName, setFilterName] = useState('');
+  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
 
   const dataFiltered: User[] = applyFilter({
     inputData: users.data,
@@ -99,6 +102,7 @@ export function UsersView() {
                       row={row}
                       selected={table.selected.includes(row.id)}
                       onSelectRow={() => table.onSelectRow(row.id)}
+                      onDeleteRow={() => setConfirmDeleteId(row.id)}
                     />
                   ))}
 
@@ -123,6 +127,29 @@ export function UsersView() {
           onRowsPerPageChange={table.onChangeRowsPerPage}
         />
       </Card>
+
+      <ConfirmDialog
+        open={!!confirmDeleteId}
+        content="Are you sure you want to delete this user?"
+        onClose={() => setConfirmDeleteId(null)}
+        onConfirm={async () => {
+          if (confirmDeleteId) {
+            await deleteUser(confirmDeleteId);
+            await fetchUsers();
+            setConfirmDeleteId(null);
+          }
+        }}
+      />
+      <Snackbar
+        open={deleteSuccess}
+        autoHideDuration={3000}
+        onClose={() => setDeleteSuccess(false)}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+      >
+        <Alert severity="success" onClose={() => setDeleteSuccess(false)} sx={{ width: '100%' }}>
+          User deleted successfully!
+        </Alert>
+      </Snackbar>
     </DashboardContent>
   );
 }
