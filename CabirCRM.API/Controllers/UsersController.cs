@@ -5,7 +5,6 @@ using CabirCRM.Application.Interfaces;
 using CabirCRM.Application.Requests.Users;
 using CabirCRM.Application.Responses.Common;
 using CabirCRM.Application.Responses.Users;
-using CabirCRM.Application.Responses.Common;
 using CabirCRM.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

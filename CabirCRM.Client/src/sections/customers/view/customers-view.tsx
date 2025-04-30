@@ -40,6 +40,7 @@ export function CustomersView() {
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
   const [confirmDeleteIds, setConfirmDeleteIds] = useState<string[] | null>(null);
   const [deleteSuccess, setDeleteSuccess] = useState(false);
+  const [deleteError, setDeleteError] = useState<string | null>(null);
 
   const handleOpenNew = () => {
     setEditingCustomer(null);
@@ -186,10 +187,14 @@ export function CustomersView() {
         onClose={() => setConfirmDeleteId(null)}
         onConfirm={async () => {
           if (confirmDeleteId) {
-            await deleteCustomer(confirmDeleteId);
-            setConfirmDeleteId(null);
-            fetchCustomers();
-            setDeleteSuccess(true);
+            try {
+              await deleteCustomer(confirmDeleteId);
+              setConfirmDeleteId(null);
+              fetchCustomers();
+              setDeleteSuccess(true);
+            } catch (error: any) {
+              setDeleteError(error?.response?.data?.message || 'Failed to delete customer');
+            }
           }
         }}
       />
@@ -200,13 +205,17 @@ export function CustomersView() {
         onClose={() => setConfirmDeleteIds(null)}
         onConfirm={async () => {
           if (confirmDeleteIds?.length) {
-            for (const id of confirmDeleteIds) {
-              await deleteCustomer(id);
+            try {
+              for (const id of confirmDeleteIds) {
+                await deleteCustomer(id);
+              }
+              await fetchCustomers();
+              table.onSelectAllRows(false, []);
+              setConfirmDeleteIds(null);
+              setDeleteSuccess(true);
+            } catch (error: any) {
+              setDeleteError(error?.response?.data?.message || 'Failed to delete selected customers');
             }
-            await fetchCustomers();
-            table.onSelectAllRows(false, []);
-            setConfirmDeleteIds(null);
-            setDeleteSuccess(true);
           }
         }}
       />
@@ -233,6 +242,31 @@ export function CustomersView() {
           }}
         >
           Customer deleted successfully!
+        </Alert>
+      </Snackbar>
+
+      <Snackbar
+        open={!!deleteError}
+        autoHideDuration={4000}
+        onClose={() => setDeleteError(null)}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        sx={{ maxWidth: 320 }}
+      >
+        <Alert
+          onClose={() => setDeleteError(null)}
+          severity="error"
+          variant="filled"
+          sx={{
+            width: '100%',
+            typography: 'body2',
+            bgcolor: 'error.lighter',
+            color: 'error.darker',
+            boxShadow: 0,
+            borderRadius: 1,
+            alignItems: 'center',
+          }}
+        >
+          {deleteError}
         </Alert>
       </Snackbar>
     </DashboardContent>
