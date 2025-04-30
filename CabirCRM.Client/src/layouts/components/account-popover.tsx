@@ -1,6 +1,6 @@
 import type { IconButtonProps } from '@mui/material/IconButton';
 
-import { useState, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -14,13 +14,9 @@ import MenuItem, { menuItemClasses } from '@mui/material/MenuItem';
 
 import { useRouter, usePathname } from 'src/routes/hooks';
 
-// ----------------------------------------------------------------------
+import { useAuth } from 'src/hooks';
 
-const _myAccount = {
-  displayName: 'Jaydon Frankie',
-  email: 'demo@minimals.cc',
-  photoURL: '/assets/images/avatar/avatar-25.webp',
-};
+// ----------------------------------------------------------------------
 
 
 export type AccountPopoverProps = IconButtonProps & {
@@ -33,6 +29,7 @@ export type AccountPopoverProps = IconButtonProps & {
 };
 
 export function AccountPopover({ data = [], sx, ...other }: AccountPopoverProps) {
+  const { user } = useAuth();
   const router = useRouter();
 
   const pathname = usePathname();
@@ -61,16 +58,16 @@ export function AccountPopover({ data = [], sx, ...other }: AccountPopoverProps)
         onClick={handleOpenPopover}
         sx={{
           p: '2px',
-          width: 40,
-          height: 40,
+          width: 46,
+          height: 46,
           background: (theme) =>
             `conic-gradient(${theme.vars.palette.primary.light}, ${theme.vars.palette.warning.light}, ${theme.vars.palette.primary.light})`,
           ...sx,
         }}
         {...other}
       >
-        <Avatar src={_myAccount.photoURL} alt={_myAccount.displayName} sx={{ width: 1, height: 1 }}>
-          {_myAccount.displayName.charAt(0).toUpperCase()}
+        <Avatar src="/assets/ic-user.png" alt={user?.username} sx={{ width: 1, height: 1 }}>
+          {user?.username.charAt(0).toUpperCase()}
         </Avatar>
       </IconButton>
 
@@ -88,11 +85,11 @@ export function AccountPopover({ data = [], sx, ...other }: AccountPopoverProps)
       >
         <Box sx={{ p: 2, pb: 1.5 }}>
           <Typography variant="subtitle2" noWrap>
-            {_myAccount?.displayName}
+            {user?.username}
           </Typography>
 
           <Typography variant="body2" sx={{ color: 'text.secondary' }} noWrap>
-            {_myAccount?.email}
+            {user?.email}
           </Typography>
         </Box>
 

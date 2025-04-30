@@ -4,11 +4,12 @@ import { useState , useEffect, createContext } from 'react';
 
 import { AuthClient } from '../clients';
 
-import type { AuthResponse, LoginRequest, RegisterRequest } from '../models';
+import type { User, AuthResponse, LoginRequest, RegisterRequest } from '../models';
 
 // ----------------------------------------------------------------------
 
 type AuthContextType = {
+  user?: User | null;
   isAuthenticated: boolean;
   isInitialized: boolean;
   login: (credentials: LoginRequest) => Promise<void>;
@@ -22,6 +23,7 @@ const authClient = new AuthClient();
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [isInitialized, setIsInitialized] = useState<boolean>(false);
+  const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
     const token = localStorage.getItem('access_token');
@@ -32,6 +34,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const login = async (credentials: LoginRequest) => {
     const response: AuthResponse = await authClient.login(credentials);
     localStorage.setItem('access_token', response.token);
+    setUser(response.user);
     setIsAuthenticated(true);
   };
 
@@ -45,7 +48,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, isInitialized, login, logout, register }}>
+    <AuthContext.Provider value={{ isAuthenticated, isInitialized, login, logout, register, user }}>
       {children}
     </AuthContext.Provider>
   );

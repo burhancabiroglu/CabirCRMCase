@@ -1,3 +1,5 @@
+import type { User } from './user';
+
 export type LoginRequest = {
   username: string;
   password: string;
@@ -21,9 +23,5 @@ export type AuthResponse = {
   token: string;
   refreshToken?: string;
   Expiration?: string;
-  user: {
-    id: string;
-    username: string;
-    role: string;
-  };
+  user: User
 }
