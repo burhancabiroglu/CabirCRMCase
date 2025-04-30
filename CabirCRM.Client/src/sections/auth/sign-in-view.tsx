@@ -14,7 +14,6 @@ import { useState, useCallback } from 'react';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
-import Divider from '@mui/material/Divider';
 import TextField from '@mui/material/TextField';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -155,45 +154,6 @@ export function SignInView() {
         </Typography>
       </Box>
       {renderForm}
-      <Divider sx={{ my: 3, '&::before, &::after': { borderTopStyle: 'dashed' } }}>
-        <Typography
-          variant="overline"
-          sx={{ color: 'text.secondary', fontWeight: 'fontWeightMedium' }}
-        >
-          Demo Account
-        </Typography>
-      </Divider>
-      <Box
-        sx={{
-          gap: 1,
-          display: 'flex',
-          justifyContent: 'center',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
-        <Box
-          sx={{
-            display: 'flex',
-          }}
-        >
-          <Link variant="subtitle2">Email:</Link>
-          <Typography variant="body2" sx={{ ml: 0.5, color: 'text.primary' }}>
-            testuser@mail.com
-          </Typography>
-        </Box>
-
-        <Box
-          sx={{
-            display: 'flex',
-          }}
-        >
-          <Link variant="subtitle2">Password:</Link>
-          <Typography variant="body2" sx={{ ml: 0.5, color: 'text.primary' }}>
-            Test1234!
-          </Typography>
-        </Box>
-      </Box>
       <Snackbar
         open={!!error}
         autoHideDuration={6000}
